@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Come Code With Me</title>
+</head>
+<body>
+    {% for blog_post in blog_posts %}
+        {{ blog_post.headline }}<br>
+        {{ blog_post.post_body }}<br>
+        {{ blog_post.date_created }}<br>
+    {% endfor %}
+</body>
+</html>
