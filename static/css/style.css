@@ -1,0 +1,27 @@
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+html {
+    height: 100%;
+}
+
+body {
+    background-color: black;
+    background-image: url("../images/shutterstock_2189462235.webp");
+    background-size: cover;
+    color: #fff;
+
+/* Credit: code for sticky footer taken from https://materializecss.com/footer.html 
+START */
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+}
+
+main {
+flex: 1 0 auto;
+}
+/* FINISH */
