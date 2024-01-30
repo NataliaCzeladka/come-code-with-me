@@ -1,8 +1,6 @@
 {% extends "base.html" %}
 {% block content %}
 
-    <h2>Extension to base template testing</h2>
-
     {% for blog_post in blog_posts %}
         {{ blog_post.headline }}<br>
         {{ blog_post.post_body }}<br>
