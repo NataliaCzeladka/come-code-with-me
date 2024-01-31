@@ -13,10 +13,8 @@ body {
     background-color: #000000;
     background-image: url("../images/shutterstock_2189462235.webp");
     background-size: cover;
+    background-repeat: repeat;
     color: #fff;
-
-/* Credit: code for sticky footer taken from https://materializecss.com/footer.html 
-START */
     display: flex;
     min-height: 100vh;
     flex-direction: column;
@@ -25,4 +23,22 @@ START */
 main {
 flex: 1 0 auto;
 }
-/* FINISH */
+
+nav {
+    min-height: 10vw;
+}
+
+.black-transparent {
+    background-color: #00000080;
+}
+
+.blog-name h1 {
+    color: #8f501d;
+    font-family: 'Stint Ultra Expanded', serif;
+    /* line-height: 90%; */
+}
+
+.blog-name h6 {
+    font-family: 'Stint Ultra Expanded', serif;
+    letter-spacing: 5px;
+}
