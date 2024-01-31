@@ -24,6 +24,10 @@ main {
 flex: 1 0 auto;
 }
 
+header {
+    padding-bottom: 15px;
+}
+
 nav {
     min-height: 10vw;
 }
@@ -35,10 +39,136 @@ nav {
 .blog-name h1 {
     color: #8f501d;
     font-family: 'Stint Ultra Expanded', serif;
-    /* line-height: 90%; */
+    line-height: 90%;
 }
 
 .blog-name h6 {
     font-family: 'Stint Ultra Expanded', serif;
     letter-spacing: 5px;
+}
+
+/* Media Queries */
+
+@media screen and (min-width: 1401px) and (max-width: 1550px) {
+
+    .blog-name h1 {
+        font-size: 160%;
+    }
+
+    .blog-name h6 {
+        font-size: 50%;
+    }
+}
+
+@media screen and (min-width: 1201px) and (max-width: 1400px) {
+    
+    nav {
+        min-height: 13vw;
+    }
+    
+    .blog-name h1 {
+        font-size: 150%;
+    }
+
+    .blog-name h6 {
+        font-size: 40%;
+    }
+}
+
+@media screen and (min-width: 991px) and (max-width: 1200px) {
+
+    nav {
+        min-height: 15vw;
+    }
+    
+    .blog-name h1 {
+        font-size: 130%;
+    }
+
+    .blog-name h6 {
+        font-size: 40%;
+    }
+}
+
+@media screen and (min-width: 769px) and (max-width: 990px) {
+
+    nav {
+        min-height: 21vw;
+    }
+    
+    .blog-name h1 {
+        font-size: 130%;
+        line-height: 110%;
+    }
+
+    .blog-name h6 {
+        font-size: 40%;
+    }
+}
+
+@media screen and (min-width: 576px) and (max-width: 768px) {
+
+    nav {
+        min-height: 28vw;
+    }
+    
+    .blog-name h1 {
+        font-size: 130%;
+        line-height: 110%;
+    }
+
+    .blog-name h6 {
+        font-size: 40%;
+    }
+}
+
+@media screen and (min-width: 450px) and (max-width: 575px) {
+
+    nav {
+        min-height: 40vw;
+    }
+    
+    .blog-name h1 {
+        font-size: 110%;
+        line-height: 100%;
+    }
+
+    .blog-name h6 {
+        font-size: 40%;
+        line-height: 130%;
+    }
+}
+
+@media screen and (min-width: 330px) and (max-width: 449px) {
+
+    nav {
+        min-height: 50vw;
+    }
+    
+    .blog-name h1 {
+        font-size: 90%;
+        line-height: 100%;
+    }
+
+    .blog-name h6 {
+        font-size: 40%;
+        line-height: 120%;
+    }
+}
+
+@media screen and (max-width: 329px) {
+
+    nav {
+        min-height: 70vw;
+    }
+    
+    .blog-name h1 {
+        font-size: 90%;
+        line-height: 100%;
+    }
+
+    .blog-name h6 {
+        font-size: 40%;
+        line-height: 120%;
+    }
 }
