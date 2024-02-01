@@ -22,6 +22,7 @@ body {
 
 main {
 flex: 1 0 auto;
+padding: 50px;
 }
 
 header {
@@ -45,6 +46,20 @@ nav {
 .blog-name h6 {
     font-family: 'Stint Ultra Expanded', serif;
     letter-spacing: 5px;
+}
+
+.form-outer {
+    margin-top: 0;
+    padding-top: 0;
+}
+
+.form-title {
+    padding-top: 30px;
+    font-family: 'Stint Ultra Expanded', serif;
+}
+
+.mocha {
+    background-color: #8f501d;
 }
 
 /* Media Queries */
