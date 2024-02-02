@@ -30,12 +30,16 @@ nav {
 }
 
 .black-transparent {
-    background-color: #00000080;
+    background-color: #00000095;
 }
 
 .blog-name h1 {
     color: #8f501d;
     font-family: 'Stint Ultra Expanded', serif;
+    text-shadow: #000 0px 0px 1px,   #000 0px 0px 1px,   #000 0px 0px 1px,
+        #000 0px 0px 1px,   #000 0px 0px 1px,   #000 0px 0px 1px,
+        #000 0px 0px 1px,   #000 0px 0px 1px,   #000 0px 0px 1px,
+        #000 0px 0px 1px,   #000 0px 0px 1px,   #000 0px 0px 1px;
     line-height: 90%;
 }
 
@@ -52,10 +56,22 @@ nav {
 }
 
 .form-title {
-    font-size: 180%;
     padding-top: 10px;
     font-family: 'Stint Ultra Expanded', serif;
+    letter-spacing: 1px;
+}
 
+.form-outer h3 {
+    color:#8f501d;
+    text-shadow: #000 0px 0px 1px,   #000 0px 0px 1px,   #000 0px 0px 1px,
+        #000 0px 0px 1px,   #000 0px 0px 1px,   #000 0px 0px 1px,
+        #000 0px 0px 1px,   #000 0px 0px 1px,   #000 0px 0px 1px,
+        #000 0px 0px 1px,   #000 0px 0px 1px,   #000 0px 0px 1px;
+}
+
+.form-outer h6 {
+    font-size: 130%;
+    letter-spacing: 2px;
 }
 
 .mocha {
@@ -64,6 +80,10 @@ nav {
 
 .flash-msg {
     font-family: 'Stint Ultra Expanded', serif;
+}
+
+.internal-link {
+    color: #ca9163;
 }
 
 /* Media Queries */
