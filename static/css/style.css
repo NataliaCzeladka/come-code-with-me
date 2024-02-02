@@ -48,6 +48,16 @@ nav {
     line-height: 90%;
 }
 
+.nav-extended ul li a {
+    font-family: 'Stint Ultra Expanded', serif;
+    font-size: 110%;
+    letter-spacing: 1px;
+}
+
+.nav-extended ul li a:hover {
+    color: #ad7c54;
+}
+
 .form-outer {
     /* margin-top: 0; */
     padding-top: 10px;

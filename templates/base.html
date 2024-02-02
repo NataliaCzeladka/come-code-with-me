@@ -2,7 +2,18 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description"
+        content="Hello there, fellow coding enthusiasts and aspiring developers! Welcome to my humble corner 
+        of the internet where I share my journey, discoveries, and insights into the captivating world of web 
+        application development. My name is Natalia, and I'm a passionate student on a quest to unravel the 
+        mysteries of code and build extraordinary web experiences.">
+    <meta name="keywords" content="coding blog, programming blog, web app development, programming resources, coding challenges, tech reviews, women in tech">
+    <meta name="author"
+        content="Website designed and maintained by Natalia Czeladka, Web App Developement Student at Code Institute.">
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Pontano+Sans:wght@300;400;500;600;700&family=Stint+Ultra+Expanded&display=swap" rel="stylesheet">
@@ -27,9 +38,9 @@
               </a>
               <a href="#" data-target="mobile-demo" class="sidenav-trigger right"><i class="fas fa-bars"></i></a>
               <ul class="right hide-on-med-and-down">
-                <li><a href="{{ url_for('get_blog_posts')}}">Home</a></li>
-                <li><a href="#">Contact</a></li>
-                <li><a href="{{ url_for('sign_up')}}">Sign In / Sign Up</a></li>
+                <li><a href="#">Home</a></li>
+                <li><a href="{{ url_for('get_blog_posts')}}">Blog</a></li>
+                <li><a href="{{ url_for('sign_up')}}">Sign In/Up</a></li>
               </ul>
             </div>
         </nav>
@@ -37,8 +48,8 @@
           <!-- mobile sidenav -->
           <ul class="sidenav" id="mobile-demo">
             <li><h4 class="center-align brown-text">Come Code with Me</h4></li>
-            <li><a href="{{ url_for('get_blog_posts')}}">Home</a></li>
-            <li><a href="#">Contact</a></li>
+            <li><a href="#">Home</a></li>
+            <li><a href="{{ url_for('get_blog_posts')}}">Blog</a></li>
             <li><a href="{{ url_for('sign_up')}}">Sign In / Sign Up</a></li>
           </ul>
     </header>
@@ -68,7 +79,7 @@
         © 2024 Natalia Czeladka, Web App Developement Student @ Code Institute
         </div>
         <div class="right">
-          Find me on:
+          Want to collaborate? Find me on:
           <a href="https://www.linkedin.com/in/natalia-czeladka/" target="_blank" rel="noopener"
               aria-label="Find me on linkedIn (link opens in a new tab)">
               <i class="fa-brands fa-linkedin"></i>
