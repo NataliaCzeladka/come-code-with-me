@@ -54,13 +54,36 @@
               {% endfor %}
           {% endif %}
       {% endwith %}
-  </section>
+    </section>
 
     <!-- Main Body -->
     <main>
     {% block content %}
     {% endblock %}
     </main>
+
+    <footer class="black-transparent">
+      <section>
+        <div class="left">
+        © 2024 Natalia Czeladka, Web App Developement Student @ Code Institute
+        </div>
+        <div class="right">
+          Find me on:
+          <a href="https://www.linkedin.com/in/natalia-czeladka/" target="_blank" rel="noopener"
+              aria-label="Find me on linkedIn (link opens in a new tab)">
+              <i class="fa-brands fa-linkedin"></i>
+          </a>
+          <a href="https://github.com/NataliaCzeladka" target="_blank" rel="noopener"
+              aria-label="Find me on GitHub (link opens in a new tab)">
+              <i class="fa-brands fa-github"></i>
+          </a>
+          <a href="https://www.facebook.com/natalia.czeladka/" target="_blank" rel="noopener"
+              aria-label="Find me on Facebook (link opens in a new tab)">
+              <i class="fa-brands fa-facebook"></i>
+          </a>
+        </div>
+      </section>
+    </footer>
 
     <!-- Script links for Materialize JS and custom JavaScript code -->
     <script src="https://code.jquery.com/jquery-3.7.1.min.js" 

@@ -34,23 +34,23 @@ nav {
 }
 
 .blog-name h1 {
-    color: #8f501d;
+    color: #9b5720;
     font-family: 'Stint Ultra Expanded', serif;
     text-shadow: #000 0px 0px 1px,   #000 0px 0px 1px,   #000 0px 0px 1px,
         #000 0px 0px 1px,   #000 0px 0px 1px,   #000 0px 0px 1px,
         #000 0px 0px 1px,   #000 0px 0px 1px,   #000 0px 0px 1px,
         #000 0px 0px 1px,   #000 0px 0px 1px,   #000 0px 0px 1px;
-    line-height: 90%;
 }
 
 .blog-name h6 {
     font-family: 'Stint Ultra Expanded', serif;
     letter-spacing: 5px;
+    line-height: 90%;
 }
 
 .form-outer {
-    margin-top: 0;
-    padding-top: 20px;
+    /* margin-top: 0; */
+    padding-top: 10px;
     border: solid white 1px;
     border-radius: 20px;
 }
@@ -62,7 +62,7 @@ nav {
 }
 
 .form-outer h3 {
-    color:#8f501d;
+    color: #ad7c54;
     text-shadow: #000 0px 0px 1px,   #000 0px 0px 1px,   #000 0px 0px 1px,
         #000 0px 0px 1px,   #000 0px 0px 1px,   #000 0px 0px 1px,
         #000 0px 0px 1px,   #000 0px 0px 1px,   #000 0px 0px 1px,
@@ -74,8 +74,12 @@ nav {
     letter-spacing: 2px;
 }
 
-.mocha {
+.btn-mocha {
     background-color: #8f501d;
+}
+
+.btn-mocha:hover {
+    background-color: #ad7c54;
 }
 
 .flash-msg {
@@ -83,7 +87,23 @@ nav {
 }
 
 .internal-link {
-    color: #ca9163;
+    color: #ad7c54;
+}
+
+footer {
+    font-family: 'Stint Ultra Expanded', serif;
+    font-size: 110%;
+    letter-spacing: 1px;
+    padding: 20px;
+}
+
+footer a {
+    color: #ad7c54;
+}
+
+footer a:hover,
+.internal-link:hover {
+    color: #9b5720;
 }
 
 /* Media Queries */
