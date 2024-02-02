@@ -22,11 +22,7 @@ body {
 
 main {
 flex: 1 0 auto;
-padding: 50px;
-}
-
-header {
-    padding-bottom: 15px;
+padding: 3% 0;
 }
 
 nav {
@@ -50,16 +46,24 @@ nav {
 
 .form-outer {
     margin-top: 0;
-    padding-top: 0;
+    padding-top: 20px;
+    border: solid white 1px;
+    border-radius: 20px;
 }
 
 .form-title {
-    padding-top: 30px;
+    font-size: 180%;
+    padding-top: 10px;
     font-family: 'Stint Ultra Expanded', serif;
+
 }
 
 .mocha {
     background-color: #8f501d;
+}
+
+.flash-msg {
+    font-family: 'Stint Ultra Expanded', serif;
 }
 
 /* Media Queries */
