@@ -22,7 +22,7 @@ body {
 
 main {
     flex: 1 0 auto;
-    padding: 3% 0;
+    padding: 2% 0;
 }
 
 nav {
@@ -93,8 +93,9 @@ nav {
 }
 
 .flash-msg {
-    font-family: 'Stint Ultra Expanded', serif;
-    color: #fff;
+    font-family: 'Sacramento', serif;
+    color: #3bbea2;
+    background-color: #00000095;
     margin: 10px;
 }
 
