@@ -58,8 +58,33 @@ nav {
     color: #ad7c54;
 }
 
+.intro {
+    padding-top: 20px;
+}
+
+.intro div img {
+    background-color: #000;
+    position: absolute;
+    width: 500px;
+    padding: 20px;
+    border: solid #fff 1px;
+    border-radius: 20px;
+}
+
+.intro-text {
+    border: solid #fff 1px;
+    border-radius: 20px;
+}
+
+.intro div h4 {
+    font-family: 'Sacramento', serif;
+    color: #ad7c54;
+    line-height: 130%;
+    letter-spacing: 1px;
+    padding: 0 20px;
+}
+
 .form-outer {
-    /* margin-top: 0; */
     padding-top: 10px;
     border: solid white 1px;
     border-radius: 20px;
@@ -112,11 +137,16 @@ footer {
 
 footer a {
     color: #ad7c54;
+    padding: 2px;
 }
 
 footer a:hover,
 .internal-link:hover {
     color: #9b5720;
+}
+
+footer div {
+    padding: 2px;
 }
 
 /* Media Queries */
