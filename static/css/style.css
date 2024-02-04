@@ -64,8 +64,8 @@ nav {
 
 .intro div img {
     background-color: #000;
-    position: absolute;
-    width: 500px;
+    display: block;
+    width: 80%;
     padding: 20px;
     border: solid #fff 1px;
     border-radius: 20px;
@@ -119,7 +119,7 @@ nav {
 
 .flash-msg {
     font-family: 'Sacramento', serif;
-    color: #3bbea2;
+    color:#ad7c54;
     background-color: #00000095;
     margin: 10px;
 }
