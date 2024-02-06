@@ -11,13 +11,13 @@
                             <img src='{{ blog_post.image_url }}'>
                         </div>
                         <div class="card-content">
-                            <span class="card-title activator grey-text text-darken-4">
+                            <span class="card-title grey-text text-darken-4">
                                 {% if blog_post.is_new == "on" %}
                                     <i class="fa-solid fa-circle-exclamation tooltipped light-green-text"
                                     data-position="left" data-tooltip="NEW POST!"></i>
                                 {% endif %}
                                 <strong> {{ blog_post.headline }}</strong></span>
-                            <h6 class="black-text"><em>Category: {{ blog_post.category }}<i class="fa-solid fa-ellipsis-vertical right"></i></em></h6>
+                            <h6 class="black-text activator"><em>Category: {{ blog_post.category_name }}</em><i class="fa-solid fa-ellipsis-vertical right"></i></h6>
                         </div>
                         <div class="card-reveal">
                             <span class="card-title grey-text text-darken-4"><strong>{{ blog_post.headline }}</strong><i class="fa-solid fa-xmark right"></i></span>
@@ -29,8 +29,15 @@
                     </div>
                 </div>
             {% endfor %}
-
+                 
         </div>
     </div>    
+
+    <div class="center-align">
+        <a href="{{ url_for('add_blog_post')}}" aria-label="It opens Add Blog Post page">
+            <button class="btn waves-effect waves-light btn-large btn-mocha" type="submit" name="action">
+                <i class="fa-solid fa-plus"></i> Add New Blog Post</button>
+        </a>
+    </div>
 
 {% endblock %}

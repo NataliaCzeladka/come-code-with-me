@@ -6,7 +6,11 @@
         <form class="col s12 m8 l6 offset-l3" method="POST" action="{{ url_for('sign_in') }}">
             <div class="card-panel black-transparent form-outer">
                 <h3 class="center-align form-title">Sign in to your User Account</h3>
-                <h6 class="center-align form-title">Don't have an account? Please, <a href="{{ url_for('sign_up')}}" class="internal-link" aria-label="It opens Sign Up page"><i class="fa-solid fa-arrow-right-to-bracket"></i> sign up</a>.</h6>
+                <h6 class="center-align form-title">Don't have an account? Please, 
+                    <a href="{{ url_for('sign_up')}}" class="internal-link" aria-label="It opens Sign Up page">
+                        <i class="fa-solid fa-arrow-right-to-bracket"></i> sign up
+                    </a>.
+                </h6>
                 <!-- username -->
                 <div class="row">
 					<div class="input-field col s12">

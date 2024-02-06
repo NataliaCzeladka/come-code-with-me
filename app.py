@@ -103,6 +103,12 @@ def sign_out():
     return redirect(url_for("sign_in"))
 
 
+@app.route("/add_blog_post")
+def add_blog_post():
+    return render_template("add_blog_post.html")
+
+
+
 if __name__ == "__main__":
     app.run(host=os.environ.get("IP"),
             port=int(os.environ.get("PORT")),
