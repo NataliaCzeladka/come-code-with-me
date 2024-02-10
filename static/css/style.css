@@ -117,6 +117,18 @@ nav {
     background-color: #ad7c54;
 }
 
+input, textarea {
+    color: #fff;
+}
+
+.datepicker-calendar, .select-dropdown {
+    color: #000;
+}
+
+.new-post i {
+    color:#ad7c54;
+}
+
 .flash-msg {
     font-family: 'Sacramento', serif;
     color:#ad7c54;
