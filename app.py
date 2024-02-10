@@ -105,8 +105,8 @@ def sign_out():
 
 @app.route("/add_blog_post")
 def add_blog_post():
-    return render_template("add_blog_post.html")
-
+    categories = mongo.db.categories.find().sort("category_name", 1)
+    return render_template("add_blog_post.html", categories=categories)
 
 
 if __name__ == "__main__":

@@ -125,6 +125,10 @@ input, textarea {
     color: #000;
 }
 
+.select-wrapper input.disabled-category {
+    color: #fff;
+}
+
 .new-post i {
     color:#ad7c54;
 }
