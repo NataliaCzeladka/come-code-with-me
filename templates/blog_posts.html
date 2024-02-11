@@ -36,7 +36,7 @@
                     <button class="btn waves-effect waves-light btn-medium btn-green" type="submit">
                         <i class="fa-solid fa-file-pen"></i> EDIT</button>
                 </a>
-                <a href="" aria-label="It opens Delete Blog Post page">
+                <a href="{{ url_for('delete_blog_post', blog_post_id=blog_post._id) }}" aria-label="It opens Delete Blog Post page">
                     <button class="btn waves-effect waves-light btn-medium btn-red" type="submit">
                         <i class="fa-solid fa-xmark"></i> DELETE</button>
                 </a>  

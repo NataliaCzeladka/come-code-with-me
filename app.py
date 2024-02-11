@@ -147,6 +147,13 @@ def edit_blog_post(blog_post_id):
     return render_template("edit_blog_post.html", blog_post=blog_post, categories=categories)
 
 
+@app.route("/delete_blog_post/<blog_post_id>")
+def delete_blog_post(blog_post_id):
+    mongo.db.blog_posts.delete_one({"_id": ObjectId(blog_post_id)})
+    flash("Blog Post Successfully Deleted")
+    return redirect(url_for("get_blog_posts"))
+
+
 if __name__ == "__main__":
     app.run(host=os.environ.get("IP"),
             port=int(os.environ.get("PORT")),
