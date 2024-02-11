@@ -13,7 +13,7 @@
                 <div class="card-content">
                     <span class="card-title grey-text text-darken-4">
                         {% if blog_post.is_new == "on" %}
-                        <i class="fa-solid fa-circle-exclamation tooltipped light-green-text" data-position="left"
+                        <i class="fa-solid fa-circle-exclamation tooltipped green-text text-darken-3" data-position="left"
                             data-tooltip="NEW POST!"></i>
                         {% endif %}
                         <strong> {{ blog_post.headline }}</strong></span>
@@ -30,9 +30,18 @@
                     <p><a href="#">Read more...</a></p>
                 </div>
             </div>
+            <div class="center-align">
+                <a href="" aria-label="It opens Edit Blog Post page">
+                    <button class="btn waves-effect waves-light btn-medium btn-green" type="submit">
+                        <i class="fa-solid fa-file-pen"></i> EDIT</button>
+                </a>
+                <a href="" aria-label="It opens Delete Blog Post page">
+                    <button class="btn waves-effect waves-light btn-medium btn-red" type="submit">
+                        <i class="fa-solid fa-file-pen"></i> DELETE</button>
+                </a>
+            </div>
         </div>
         {% endfor %}
-
     </div>
 </div>
 
