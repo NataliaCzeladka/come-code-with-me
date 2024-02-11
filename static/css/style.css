@@ -117,12 +117,29 @@ nav {
     background-color: #ad7c54;
 }
 
+.extra-padding {
+    padding: 0 20px;
+}
+
 input, textarea {
     color: #fff;
 }
 
-.datepicker-calendar, .select-dropdown {
+.datepicker-calendar {
     color: #000;
+}
+
+.datepicker-date-display {
+    background-color: #ad7c54;
+}
+
+.datepicker-cancel, .datepicker-done {
+    color:#8f501d;
+}
+
+.select-dropdown {
+    color: #ad7c54;
+    background-color: #fff;
 }
 
 .select-wrapper input.disabled-category {
@@ -131,6 +148,15 @@ input, textarea {
 
 .new-post i {
     color:#ad7c54;
+}
+
+.dropdown-content li>span {
+    color: #8f501d;
+    background-color: #fafafa;
+}
+
+.switch label input[type=checkbox]:checked+.lever:after {
+    background-color: #ad7c54;
 }
 
 .flash-msg {

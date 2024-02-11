@@ -2,9 +2,10 @@
 {% block content %}
 
 <div class="row new-post">
-    <form class="col s12 m8 l6 offset-l3 black-transparent form-outer" method="POST" action="">
+    <form class="col s12 m8 offset-m2 black-transparent form-outer" method="POST" action="{{ url_for('add_blog_post') }}">
         <h3 class="center-align form-title">Add New Blog Post</h3>
-        <div class="row">
+        <!-- category selection -->
+        <div class="row extra-padding">
             <div class="input-field col s12">
                 <i class="fas fa-folder-open prefix"></i>
                 <select id="category_name" name="category_name" class="validate" required>
@@ -16,14 +17,16 @@
                 <label for="category_name">Post Category</label>
             </div>
         </div>
-        <div class="row">
+        <!-- blog headline -->
+        <div class="row extra-padding">
             <div class="input-field col s12">
                 <i class="fa-solid fa-newspaper prefix"></i>
                 <input id="headline" name="headline" type="text" minlength="5" maxlength="80" class="validate" required>
                 <label for="headline">Headline</label>
             </div>
         </div>
-        <div class="row">
+        <!-- blog introduction -->
+        <div class="row extra-padding">
             <div class="input-field col s12">
                 <i class="fa-solid fa-align-left prefix"></i>
                 <textarea id="intro" name="intro" minlength="5" maxlength="350" class="materialize-textarea validate"
@@ -31,39 +34,49 @@
                 <label for="intro">Intoduction</label>
             </div>
         </div>
-        <div class="row">
+        <!-- blog post body -->
+        <div class="row extra-padding">
             <div class="input-field col s12">
                 <i class="fa-solid fa-pen-to-square prefix"></i>
                 <textarea id="post_body" name="post_body" minlength="5" class="materialize-textarea validate"
                     required></textarea>
-                <label for="post_body">Blog Post</label>
+                <label for="post_body">Blog Post Body</label>
             </div>
         </div>
-        <div class="row">
+        <!-- image url path -->
+        <div class="row extra-padding">
             <div class="input-field col s12">
                 <i class="fa-solid fa-image prefix"></i>
                 <input id="image_url" name="image_url" type="text" class="validate">
                 <label for="image_url">Image URL Path</label>
             </div>
         </div>
-        <div class="row">
+        <!-- date created picker -->
+        <div class="row extra-padding">
             <div class="input-field col s12">
                 <i class="fa-solid fa-calendar-days prefix"></i>
                 <input id="date_created" name="date-created" type="text" class="datepicker validate" required>
                 <label for="date_created">Date Created</label>
             </div>
         </div>
-        <div class="row">
+        <!-- is new toggle -->
+        <div class="row extra-padding">
             <div class="input-field col s12">
                 <div class="switch">
                     <i class="fas fa-exclamation-circle prefix"></i>
                     <label for="is_new">
                         <input type="checkbox" id="is_new" name="is_new">
-                        <span class="lever"></span>
+                        <span class="lever grey lighten-2"></span>
                         DISPLAY MY POST AS NEW
                     </label>
                 </div>
             </div>
+        </div>
+        <!-- submit button -->
+        <div class="row">
+            <button type="submit" class="col s4 offset-s4 btn-large btn-mocha">
+                <i class="fa-regular fa-floppy-disk white-text"></i>&nbsp;&nbsp;Save New Blog Post 
+            </button>
         </div>
     </form>
 </div>
