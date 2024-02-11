@@ -2,16 +2,21 @@
 {% block content %}
 
 <div class="row new-post">
-    <form class="col s12 m8 offset-m2 black-transparent form-outer" method="POST" action="{{ url_for('edit_blog_post', blog_post_id=blog_post._id) }}">
+    <form class="col s12 m8 offset-m2 black-transparent form-outer" method="POST"
+        action="{{ url_for('edit_blog_post', blog_post_id=blog_post._id) }}">
         <h3 class="center-align form-title">Edit Blog Post</h3>
         <!-- category selection -->
         <div class="row extra-padding">
             <div class="input-field col s12">
                 <i class="fas fa-folder-open prefix"></i>
                 <select id="category_name" name="category_name" required>
-                    <option value="" disabled selected>Choose Category</option>
+                    <option value="" disabled>Choose Category</option>
                     {% for category in categories %}
-                    <option value="{{ category.category_name }}">{{ category.category_name }}</option>
+                        {% if category.category_name == blog_post.category_name %}
+                            <option value="{{ category.category_name }}" selected>{{ category.category_name }}</option>
+                        {% else %}
+                            <option value="{{ category.category_name }}">{{ category.category_name }}</option>
+                        {% endif %}
                     {% endfor %}
                 </select>
                 <label for="category_name">Post Category</label>
@@ -21,7 +26,8 @@
         <div class="row extra-padding">
             <div class="input-field col s12">
                 <i class="fa-solid fa-newspaper prefix"></i>
-                <input id="headline" name="headline" type="text" minlength="5" maxlength="80" class="validate" required>
+                <input id="headline" name="headline" type="text" minlength="5" maxlength="80" 
+                    value="{{ blog_post.headline }}" class="validate" required>
                 <label for="headline">Headline</label>
             </div>
         </div>
@@ -29,8 +35,10 @@
         <div class="row extra-padding">
             <div class="input-field col s12">
                 <i class="fa-solid fa-align-left prefix"></i>
-                <textarea id="intro" name="intro" minlength="5" maxlength="350" class="materialize-textarea validate"
-                    required></textarea>
+                <textarea id="intro" name="intro" minlength="5" maxlength="350" 
+                    class="materialize-textarea validate" required>
+                {{- blog_post.intro -}}
+                </textarea>
                 <label for="intro">Intoduction</label>
             </div>
         </div>
@@ -38,8 +46,10 @@
         <div class="row extra-padding">
             <div class="input-field col s12">
                 <i class="fa-solid fa-pen-to-square prefix"></i>
-                <textarea id="post_body" name="post_body" minlength="5" class="materialize-textarea validate"
-                    required></textarea>
+                <textarea id="post_body" name="post_body" minlength="5" 
+                    class="materialize-textarea validate" required>
+                {{- blog_post.post_body -}}
+                </textarea>
                 <label for="post_body">Blog Post Body</label>
             </div>
         </div>
@@ -47,7 +57,8 @@
         <div class="row extra-padding">
             <div class="input-field col s12">
                 <i class="fa-solid fa-image prefix"></i>
-                <input id="image_url" name="image_url" type="text" class="validate" required>
+                <input id="image_url" name="image_url" type="text" 
+                    value="{{ blog_post.image_url }}" class="validate" required>
                 <label for="image_url">Image URL Path</label>
             </div>
         </div>
@@ -55,7 +66,8 @@
         <div class="row extra-padding">
             <div class="input-field col s12">
                 <i class="fa-solid fa-calendar-days prefix"></i>
-                <input id="date_created" name="date-created" type="text" class="datepicker validate" required>
+                <input id="date_created" name="date-created" type="text" 
+                    value="{{ blog_post.date_created }}" class="datepicker validate" required>
                 <label for="date_created">Date Created</label>
             </div>
         </div>
@@ -65,7 +77,11 @@
                 <div class="switch">
                     <i class="fas fa-exclamation-circle prefix"></i>
                     <label for="is_new">
-                        <input type="checkbox" id="is_new" name="is_new">
+                        {% if blog_post.is_new == "on" %}
+                            <input type="checkbox" id="is_new" name="is_new" checked>
+                        {% else %}
+                            <input type="checkbox" id="is_new" name="is_new">
+                        {% endif %}
                         <span class="lever grey lighten-2"></span>
                         DISPLAY MY POST AS NEW
                     </label>
@@ -75,7 +91,7 @@
         <!-- submit button -->
         <div class="row">
             <button type="submit" class="col s4 offset-s4 btn-large btn-mocha">
-                <i class="fa-solid fa-file-pen white-text"></i>&nbsp;&nbsp;Edit Blog Post 
+                <i class="fa-solid fa-file-pen white-text"></i>&nbsp;&nbsp;Edit Blog Post
             </button>
         </div>
     </form>

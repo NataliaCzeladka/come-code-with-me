@@ -26,7 +26,7 @@ def home():
 
 @app.route("/get_blog_posts")
 def get_blog_posts():
-    blog_posts = list(mongo.db.blog_posts.find())
+    blog_posts = list(mongo.db.blog_posts.find().sort("date_created", 1))
     return render_template("blog_posts.html", blog_posts=blog_posts)
 
 
@@ -127,7 +127,7 @@ def add_blog_post():
 
 @app.route("/edit_blog_post/<blog_post_id>", methods=["GET", "POST"])
 def edit_blog_post(blog_post_id):
-    blog_post = mongo.db.blog_post.find_one({"_id": ObjectId(blog_post_id)})
+    blog_post = mongo.db.blog_posts.find_one({"_id": ObjectId(blog_post_id)})
     categories = mongo.db.categories.find().sort("category_name", 1)
     return render_template("edit_blog_post.html", blog_post=blog_post, categories=categories)
 
