@@ -30,7 +30,8 @@
                     <p><a href="#">Read more...</a></p>
                 </div>
             </div>
-            <div class="center-align">
+            {% if session.user == "admin" %}    
+            <div class="center-align">   
                 <a href="{{ url_for('edit_blog_post', blog_post_id=blog_post._id) }}" aria-label="It opens Edit Blog Post page">
                     <button class="btn waves-effect waves-light btn-medium btn-green" type="submit">
                         <i class="fa-solid fa-file-pen"></i> EDIT</button>
@@ -38,18 +39,21 @@
                 <a href="" aria-label="It opens Delete Blog Post page">
                     <button class="btn waves-effect waves-light btn-medium btn-red" type="submit">
                         <i class="fa-solid fa-xmark"></i> DELETE</button>
-                </a>
+                </a>  
             </div>
+            {% endif %}
         </div>
         {% endfor %}
     </div>
 </div>
 
+{% if session.user == "admin" %}
 <div class="center-align">
     <a href="{{ url_for('add_blog_post')}}" aria-label="It opens Add Blog Post page">
         <button class="btn waves-effect waves-light btn-large btn-mocha" type="submit">
             <i class="fa-solid fa-plus"></i> Add New Blog Post</button>
     </a>
 </div>
+{% endif %}
 
 {% endblock %}
