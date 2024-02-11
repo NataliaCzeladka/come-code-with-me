@@ -88,13 +88,21 @@
                 </div>
             </div>
         </div>
-        <!-- submit button -->
-        <div class="row">
-            <button type="submit" class="col s4 offset-s4 btn-large btn-mocha">
-                <i class="fa-solid fa-file-pen white-text"></i>&nbsp;&nbsp;Edit Blog Post
+        <div class="center-align">
+            <!-- cancel button -->            
+            <button type="submit" class="btn btn-large btn-red btn-edit extra-margin">
+                <a href="{{ url_for('get_blog_posts') }}" class="white-text">
+                    <i class="fa-solid fa-xmark white-text"></i>&nbsp;&nbsp;CANCEL
+                </a>
+            </button>
+            <!-- edit button -->
+            <button type="submit" class="btn btn-large btn-green btn-edit extra-margin">
+                <a>
+                    <i class="fa-solid fa-file-pen white-text"></i>&nbsp;&nbsp;EDIT
+                </a>   
             </button>
         </div>
-    </form>
+    </form>   
 </div>
 
 {% endblock %}

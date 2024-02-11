@@ -113,6 +113,10 @@ nav {
     background-color: #8f501d;
 }
 
+.btn-mocha:hover {
+    background-color: #ad7c54;
+}
+
 .btn-green {
     background-color: #2e7d32;
     width: 100px;
@@ -124,8 +128,12 @@ nav {
     margin: 0 0 30px 10px;
 }
 
-.btn-mocha:hover {
-    background-color: #ad7c54;
+.btn-edit {
+    width: 150px;
+}
+
+.extra-margin {
+    margin: 20px;
 }
 
 .extra-padding {
