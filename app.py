@@ -127,6 +127,21 @@ def add_blog_post():
 
 @app.route("/edit_blog_post/<blog_post_id>", methods=["GET", "POST"])
 def edit_blog_post(blog_post_id):
+    if request.method == "POST":
+        is_new = "on" if request.form.get("is_new") else "off"
+        submit = {
+            "category_name": request.form.get("category_name"),
+            "headline": request.form.get("headline"),
+            "intro": request.form.get("intro"),
+            "post_body": request.form.get("post_body"),
+            "image_url": request.form.get("image_url"),
+            "date_created": request.form.get("date_created"),
+            "is_new": is_new,
+            "created_by": session["user"]
+        }
+        mongo.db.blog_posts.replace_one({"_id": ObjectId(blog_post_id)}, submit)
+        flash("Blog Post Successfully Updated")
+
     blog_post = mongo.db.blog_posts.find_one({"_id": ObjectId(blog_post_id)})
     categories = mongo.db.categories.find().sort("category_name", 1)
     return render_template("edit_blog_post.html", blog_post=blog_post, categories=categories)

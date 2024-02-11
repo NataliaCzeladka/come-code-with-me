@@ -123,9 +123,17 @@ nav {
     margin: 0 10px 30px 0;
 }
 
+.btn-green:hover {
+    background-color: #43b949;
+}
+
 .btn-red {
     background-color: #c62828;
     margin: 0 0 30px 10px;
+}
+
+.btn-red:hover {
+    background-color: #ff3636;
 }
 
 .btn-edit {
@@ -181,6 +189,10 @@ input, textarea {
 .flash-msg {
     font-family: 'Sacramento', serif;
     color:#ad7c54;
+    text-shadow: #000 0px 0px 1px,   #000 0px 0px 1px,   #000 0px 0px 1px,
+        #000 0px 0px 1px,   #000 0px 0px 1px,   #000 0px 0px 1px,
+        #000 0px 0px 1px,   #000 0px 0px 1px,   #000 0px 0px 1px,
+        #000 0px 0px 1px,   #000 0px 0px 1px,   #000 0px 0px 1px;
     background-color: #00000095;
     margin: 10px;
 }
