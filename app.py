@@ -103,8 +103,24 @@ def sign_out():
     return redirect(url_for("sign_in"))
 
 
-@app.route("/add_blog_post")
+@app.route("/add_blog_post", methods=["GET", "POST"])
 def add_blog_post():
+    if request.method == "POST":
+        is_new = "on" if request.form.get("is_new") else "off"
+        blog_post = {
+            "category_name": request.form.get("category_name"),
+            "headline": request.form.get("headline"),
+            "intro": request.form.get("intro"),
+            "post_body": request.form.get("post_body"),
+            "image_url": request.form.get("image_url"),
+            "date_created": request.form.get("date_created"),
+            "is_new": is_new,
+            "created_by": session["user"]
+        }
+        mongo.db.blog_posts.insert_one(blog_post)
+        flash("New Blog Post Successfully Added")
+        return redirect(url_for("get_blog_posts"))
+
     categories = mongo.db.categories.find().sort("category_name", 1)
     return render_template("add_blog_post.html", categories=categories)
 
