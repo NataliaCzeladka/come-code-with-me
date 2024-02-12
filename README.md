@@ -4,7 +4,7 @@
 
 The site consists of three pages: Home (where the blog author introduces herself), Blog (where all the blog posts are located), and Sign In/Out (where you can create a new account or log into the existing one), which is only visible if you're not signed in. If you already have an account and you're currently signed in, the third page you'll be able to see in the navbar will be Sign Out (where you can log out of your account). Adding comments to the blog posts is a functionality only available to registered users.
 
-"Come Code with Me" deployed website is available [here](https://come-code-with-me-43691c30d81d.herokuapp.com/).
+"Come Code with Me" deployed website is available [here].
 
 ## Table of Contents
 
@@ -63,3 +63,36 @@ Additionally, a [Sacramento](https://fonts.google.com/specimen/Sacramento) font 
 ![Sacramento Font](static/images/sacramento.png)
 
 [Font Awesome](https://fontawesome.com/) icons were used throughout the site, such as social media icons in the footer, or visual representations of forms' input fields.
+
+## Technologies Used
+
+### Languages Used
+
+- [HTML](https://en.wikipedia.org/wiki/HTML) - used for the main site content.
+- [CSS](https://en.wikipedia.org/wiki/CSS) - used for the main site design and layout.
+- [JavaScript](https://www.javascript.com) - used for user interaction on the site.
+- [Python](https://www.python.org/) - used for backend development.
+
+### Frameworks, Libraries and Programs Used
+
+- [Am I responsive?](https://ui.dev/amiresponsive) - used to check the site's responsiveness and to create mockups.
+- [Balsamiq](https://balsamiq.com/wireframes/) - used to create wireframes.
+- [Coolors](https://coolors.co/) - used to create the colour palette.
+- [Flask](https://flask.palletsprojects.com/en/3.0.x/) - a Python web framework.
+- [Font Awesome](https://fontawesome.com/) - used to provide icons across the website.
+- [Fontpair](https://www.fontpair.co/all) - used for font pairing.
+- [Free Convert](https://www.freeconvert.com/jpg-to-webp) - used to convert jpg/png images to webp format.
+- [Google Chrome Dev Tools](https://developer.chrome.com/docs/devtools/) - used to inspect and debug the code.
+- [Google Fonts](https://fonts.google.com/) - used to import the fonts that style all of the text content.
+- [Git](https://git-scm.com/) - used for version control by utilizing Gitpod's terminal.
+- [GitHub](https://github.com/) - used to store the project's code and images in the repository.
+- [Gitpod](https://www.gitpod.io/) - used as a code editor.
+- [Heroku](https://www.heroku.com/home) - used to deploy the website.
+- [Icon-Icons](https://icon-icons.com/) - used to provide the favicon.
+- [Jinja](https://jinjapalletsprojects.com/en/3.1.x/) - web template engine for Python.
+- [MaterializeCSS] - a CSS framework based on Material Design by Google.
+- [MongoDB](https://www.mongodb.com/) - a non-relational database used to store blog posts and users' login details.
+- [PostImage](https://postimages.org/) - an online image URL generator.
+- [PyMongo](https://www.mongodb.com/docs/drivers/pymongo/) - a Python driver for MongoDB.
+- [Tiny.png](https://tinypng.com/) - used to reduce the size of the image files.
+- [Werkzeug](https://werkzeug.palletsprojects.com/en/3.0.x/) - a WSGI utility library for Python.
