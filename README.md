@@ -89,8 +89,8 @@ Additionally, a [Sacramento](https://fonts.google.com/specimen/Sacramento) font 
 - [Gitpod](https://www.gitpod.io/) - used as a code editor.
 - [Heroku](https://www.heroku.com/home) - used to deploy the website.
 - [Icon-Icons](https://icon-icons.com/) - used to provide the favicon.
-- [Jinja](https://jinjapalletsprojects.com/en/3.1.x/) - web template engine for Python.
-- [MaterializeCSS] - a CSS framework based on Material Design by Google.
+- [Jinja](https://jinjapalletsprojects.com/en/3.1.x/) - a web template engine for Python.
+- [MaterializeCSS](https://materializecss.com/) - a CSS framework based on Material Design by Google.
 - [MongoDB](https://www.mongodb.com/) - a non-relational database used to store blog posts and users' login details.
 - [PostImage](https://postimages.org/) - an online image URL generator.
 - [PyMongo](https://www.mongodb.com/docs/drivers/pymongo/) - a Python driver for MongoDB.

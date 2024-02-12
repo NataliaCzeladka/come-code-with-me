@@ -33,6 +33,15 @@ nav {
     background-color: #00000095;
 }
 
+.card {
+    border: 2px solid #663914;
+    background-color: #b79a83ed;
+}
+
+.card .card-reveal {
+    background-color: #b79a83;
+}
+
 .blog-name h1 {
     color: #9b5720;
     font-family: 'Stint Ultra Expanded', serif;

@@ -25,9 +25,9 @@
                     <span class="card-title grey-text text-darken-4"><strong>{{ blog_post.headline }}</strong><i
                             class="fa-solid fa-xmark right"></i></span>
                     <br>
-                    <p class="black-text">{{ blog_post.intro|safe }}</p>
+                    <p class="black-text">{{ blog_post.intro }}</p>
                     <br>
-                    <p><a href="#">Read more...</a></p>
+                    <p><a href="{{ url_for('read_post', blog_post_id=blog_post._id) }}" class="white-text">Read more...</a></p>
                 </div>
             </div>
             {% if session.user == "admin" %}    

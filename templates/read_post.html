@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+{% block content %}
+
+    <div class="row intro">
+        <form class="col s12 m8 offset-m2 intro-text">
+            <div class="card-panel black center">
+                <h3 class="center-align form-title">{{ blog_post.headline }}</h3>
+                    <div class="row extra-padding">
+                        {{ blog_post.post_body|safe }}
+                    </div>
+            </div>
+        </form>
+    </div>
+
+{% endblock %}

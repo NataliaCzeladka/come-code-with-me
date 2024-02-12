@@ -103,6 +103,14 @@ def sign_out():
     return redirect(url_for("sign_in"))
 
 
+@app.route("/read_post/<blog_post_id>")
+def read_post(blog_post_id):
+    mongo.db.blog_posts.find_one({"_id": ObjectId(blog_post_id)})
+
+    blog_post = mongo.db.blog_posts.find_one({"_id": ObjectId(blog_post_id)})
+    return render_template("read_post.html", blog_post=blog_post)
+
+
 @app.route("/add_blog_post", methods=["GET", "POST"])
 def add_blog_post():
     if request.method == "POST":
