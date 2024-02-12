@@ -1,15 +1,43 @@
 {% extends "base.html" %}
 {% block content %}
 
-    <div class="row intro">
-        <form class="col s12 m8 offset-m2 intro-text">
-            <div class="card-panel black center">
+    <div class="row">
+        <form class="col s12 m8 offset-m2">
+            <div class="row black form-outer">
+                <p><i class="fa-solid fa-thumbtack left brown-text"></i>Category: {{ blog_post.category_name }}</p>
+                <p><i class="fa-solid fa-calendar-days left brown-text"></i>Date created: {{ blog_post.date_created }}</p>
                 <h3 class="center-align form-title">{{ blog_post.headline }}</h3>
-                    <div class="row extra-padding">
-                        {{ blog_post.post_body|safe }}
-                    </div>
+                <img src="{{ blog_post.image_url }}" class="col s12 l6">
+                <div class="extra-padding post-body">
+                    {{ blog_post.post_body|safe }}
+                </div>
+            </div>
+            <div class="row black form-outer"> 
+                <h4>Comments:</h4>
+                <ul>
+                    <li >
+                        <span class="brown-text text-lighten-1">{username}:</span>
+                        <span>{comment content}</span>
+                    </li>
+                    <form>
+                        <div class="row extra-padding">
+                            <div class="input-field col s12">
+                                <i class="fa-solid fa-comment-dots prefix"></i>
+                                <input id="comment_content" name="comment_content" type="text" minlength="5" maxlength="80" required>
+                                <label for="comment_content">Add New Comment</label>
+                            </div>
+                        </div>
+                        <div class="center-align">
+                            <h4 class="sacramento">Sign into your account to add comments</h4>
+                            <button type="submit" class="btn btn-small btn-mocha">
+                                <i class="fa-regular fa-floppy-disk white-text left"></i> Save Comment 
+                            </button>
+                        </div>
+                    </form>
+                </ul>
             </div>
         </form>
     </div>
+
 
 {% endblock %}

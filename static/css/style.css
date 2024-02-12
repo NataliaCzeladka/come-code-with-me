@@ -94,7 +94,7 @@ nav {
 }
 
 .form-outer {
-    padding-top: 10px;
+    padding: 20px;
     border: solid white 1px;
     border-radius: 20px;
 }
@@ -105,7 +105,9 @@ nav {
     letter-spacing: 1px;
 }
 
-.form-outer h3 {
+.form-outer h3 { 
+    font-size: 240%;
+    margin: 15px 50px 40px 50px;
     color: #ad7c54;
     text-shadow: #000 0px 0px 1px,   #000 0px 0px 1px,   #000 0px 0px 1px,
         #000 0px 0px 1px,   #000 0px 0px 1px,   #000 0px 0px 1px,
@@ -116,6 +118,24 @@ nav {
 .form-outer h6 {
     font-size: 130%;
     letter-spacing: 2px;
+}
+
+.form-outer img {
+    margin: 0 20px 20px 20px;
+}
+
+.form-outer span {
+    font-size: 110%;
+}
+
+.form-outer p {
+    font-family: 'Stint Ultra Expanded', serif;
+    margin: 0 0 0 10px;
+}
+
+.post-body {
+    font-size: 120%;
+    margin-bottom: 30px;
 }
 
 .btn-mocha {
@@ -154,7 +174,12 @@ nav {
 }
 
 .extra-padding {
-    padding: 0 20px;
+    padding: 10px 20px;
+}
+
+.sacramento {
+    font-family: 'Sacramento', serif;
+    color:#ad7c54;
 }
 
 input, textarea {
