@@ -180,6 +180,7 @@ nav {
 .sacramento {
     font-family: 'Sacramento', serif;
     color:#ad7c54;
+    margin-top: 10px;
 }
 
 input, textarea {

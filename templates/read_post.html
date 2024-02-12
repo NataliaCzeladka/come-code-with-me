@@ -20,6 +20,7 @@
                         <span>{comment content}</span>
                     </li>
                     <form>
+                        {% if session.user %}
                         <div class="row extra-padding">
                             <div class="input-field col s12">
                                 <i class="fa-solid fa-comment-dots prefix"></i>
@@ -27,11 +28,15 @@
                                 <label for="comment_content">Add New Comment</label>
                             </div>
                         </div>
+                        {% endif %}
                         <div class="center-align">
-                            <h4 class="sacramento">Sign into your account to add comments</h4>
-                            <button type="submit" class="btn btn-small btn-mocha">
+                            {% if session.user %}
+                            <button type="submit" class="btn btn-medium btn-mocha">
                                 <i class="fa-regular fa-floppy-disk white-text left"></i> Save Comment 
                             </button>
+                            {% else %}
+                            <h3 class="sacramento">Sign into your account to add comments</h3>
+                            {% endif %}
                         </div>
                     </form>
                 </ul>
