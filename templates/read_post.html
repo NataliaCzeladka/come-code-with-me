@@ -15,11 +15,13 @@
             <div class="row black form-outer"> 
                 <h4>Comments:</h4>
                 <ul>
+                    {% for comment in comments %}
                     <li >
-                        <span class="brown-text text-lighten-1">{username}:</span>
-                        <span>{comment content}</span>
+                        <span class="brown-text text-lighten-1">{{ comments.username }}:</span>
+                        <span>{ comments.comment_content }</span>
                     </li>
-                    <form>
+                    {% endfor %}
+                    <form method="POST" action="{{ url_for('add_comment', blog_post_id=blog_post_id) }}">
                         {% if session.user %}
                         <div class="row extra-padding">
                             <div class="input-field col s12">

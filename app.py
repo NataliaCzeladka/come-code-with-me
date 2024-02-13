@@ -103,14 +103,6 @@ def sign_out():
     return redirect(url_for("sign_in"))
 
 
-@app.route("/read_post/<blog_post_id>")
-def read_post(blog_post_id):
-    mongo.db.blog_posts.find_one({"_id": ObjectId(blog_post_id)})
-
-    blog_post = mongo.db.blog_posts.find_one({"_id": ObjectId(blog_post_id)})
-    return render_template("read_post.html", blog_post=blog_post)
-
-
 @app.route("/add_blog_post", methods=["GET", "POST"])
 def add_blog_post():
     if request.method == "POST":
@@ -131,6 +123,29 @@ def add_blog_post():
 
     categories = mongo.db.categories.find().sort("category_name", 1)
     return render_template("add_blog_post.html", categories=categories)
+
+
+@app.route("/read_post/<blog_post_id>")
+def read_post(blog_post_id):
+    mongo.db.blog_posts.find_one({"_id": ObjectId(blog_post_id)})
+
+    blog_post = mongo.db.blog_posts.find_one({"_id": ObjectId(blog_post_id)})
+    return render_template("read_post.html", blog_post=blog_post)
+
+
+@app.route("/add_comment/<blog_post_id>", methods=["GET", "POST"])
+def add_comment(blog_post_id):
+    if request.method == "POST":
+        comment = {
+            "comment_content": request.form.get("comment_content"),
+            "blog_post_id" : ObjectId(blog_post_id),
+            "username": session["user"]
+            }
+        mongo.db.comments.insert_one(comment)
+        flash("New Comment Successfully Added")
+        return redirect(url_for("read_post"))
+
+    return render_template("read_post.html")
 
 
 @app.route("/edit_blog_post/<blog_post_id>", methods=["GET", "POST"])
