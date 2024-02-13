@@ -125,7 +125,7 @@ def add_blog_post():
     return render_template("add_blog_post.html", categories=categories)
 
 
-@app.route("/read_post/<blog_post_id>")
+@app.route("/read_post/<blog_post_id>", methods=["GET", "POST"])
 def read_post(blog_post_id):
     mongo.db.blog_posts.find_one({"_id": ObjectId(blog_post_id)})
 
@@ -143,7 +143,7 @@ def add_comment(blog_post_id):
             }
         mongo.db.comments.insert_one(comment)
         flash("New Comment Successfully Added")
-        return redirect(url_for("read_post"))
+        return redirect(url_for("read_post", blog_post_id=blog_post_id))
 
     return render_template("read_post.html")
 

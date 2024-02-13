@@ -1,50 +1,52 @@
 {% extends "base.html" %}
 {% block content %}
 
-    <div class="row">
-        <form class="col s12 m8 offset-m2">
-            <div class="row black form-outer">
-                <p><i class="fa-solid fa-thumbtack left brown-text"></i>Category: {{ blog_post.category_name }}</p>
-                <p><i class="fa-solid fa-calendar-days left brown-text"></i>Date created: {{ blog_post.date_created }}</p>
-                <h3 class="center-align form-title">{{ blog_post.headline }}</h3>
-                <img src="{{ blog_post.image_url }}" class="col s12 l6">
-                <div class="extra-padding post-body">
-                    {{ blog_post.post_body|safe }}
-                </div>
+<div class="row">
+    <form class="col s12 m8 offset-m2">
+        <div class="row black form-outer">
+            <p><i class="fa-solid fa-thumbtack left brown-text"></i>Category: {{ blog_post.category_name }}</p>
+            <p><i class="fa-solid fa-calendar-days left brown-text"></i>Date created: {{ blog_post.date_created }}</p>
+            <h3 class="center-align form-title">{{ blog_post.headline }}</h3>
+            <img src="{{ blog_post.image_url }}" class="col s12 l6">
+            <div class="extra-padding post-body">
+                {{ blog_post.post_body|safe }}
             </div>
-            <div class="row black form-outer"> 
-                <h4>Comments:</h4>
-                <ul>
-                    {% for comment in comments %}
-                    <li >
-                        <span class="brown-text text-lighten-1">{{ comments.username }}:</span>
-                        <span>{ comments.comment_content }</span>
-                    </li>
-                    {% endfor %}
-                    <form method="POST" action="{{ url_for('add_comment', blog_post_id=blog_post_id) }}">
-                        {% if session.user %}
-                        <div class="row extra-padding">
-                            <div class="input-field col s12">
-                                <i class="fa-solid fa-comment-dots prefix"></i>
-                                <input id="comment_content" name="comment_content" type="text" minlength="5" maxlength="80" required>
-                                <label for="comment_content">Add New Comment</label>
-                            </div>
-                        </div>
-                        {% endif %}
-                        <div class="center-align">
-                            {% if session.user %}
-                            <button type="submit" class="btn btn-medium btn-mocha">
-                                <i class="fa-regular fa-floppy-disk white-text left"></i> Save Comment 
-                            </button>
-                            {% else %}
-                            <h3 class="sacramento">Sign into your account to add comments</h3>
-                            {% endif %}
-                        </div>
-                    </form>
-                </ul>
-            </div>
-        </form>
-    </div>
+        </div>
+    </form>
+</div>
 
+<div class="row black form-outer">
+    <div class="col s12">
+        <h4>Comments:</h4>
+        <ul>
+            {% for comment in comments %}
+            <li>
+                <span class="brown-text text-lighten-1">{{ comments.username }}:</span>
+                <span>{ comments.comment_content }</span>
+            </li>
+            {% endfor %}
+        </ul>
+    </div>
+    <form method="POST" action="{{ url_for('add_comment', blog_post_id=blog_post._id) }}">
+        <div class="row extra-padding">
+            {% if session.user %}
+            <div class="input-field col s12">
+                <i class="fa-solid fa-comment-dots prefix"></i>
+                <input id="comment_content" name="comment_content" type="text" minlength="5" maxlength="80" required>
+                <label for="comment_content">Add New Comment</label>
+            </div>
+            {% endif %}
+            <div class="center-align col s12">
+                {% if session.user %}
+                <button type="submit" class="btn btn-medium btn-mocha">
+                    <i class="fa-regular fa-floppy-disk white-text left"></i> Save Comment
+                </button>
+                {% else %}
+                <h3 class="sacramento">Sign into your account to add comments</h3>
+                {% endif %}
+            </div>
+        </div>
+    </form>
+</div>
 
 {% endblock %}
