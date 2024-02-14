@@ -130,22 +130,8 @@ def read_post(blog_post_id):
     mongo.db.blog_posts.find_one({"_id": ObjectId(blog_post_id)})
 
     blog_post = mongo.db.blog_posts.find_one({"_id": ObjectId(blog_post_id)})
-    return render_template("read_post.html", blog_post=blog_post)
-
-
-@app.route("/add_comment/<blog_post_id>", methods=["GET", "POST"])
-def add_comment(blog_post_id):
-    if request.method == "POST":
-        comment = {
-            "comment_content": request.form.get("comment_content"),
-            "blog_post_id" : ObjectId(blog_post_id),
-            "username": session["user"]
-            }
-        mongo.db.comments.insert_one(comment)
-        flash("New Comment Successfully Added")
-        return redirect(url_for("read_post", blog_post_id=blog_post_id))
-
-    return render_template("read_post.html")
+    comments = list(mongo.db.comments.find({"blog_post_id": ObjectId(blog_post_id)}))
+    return render_template("read_post.html", blog_post=blog_post, comments=comments)
 
 
 @app.route("/edit_blog_post/<blog_post_id>", methods=["GET", "POST"])
@@ -175,6 +161,21 @@ def delete_blog_post(blog_post_id):
     mongo.db.blog_posts.delete_one({"_id": ObjectId(blog_post_id)})
     flash("Blog Post Successfully Deleted")
     return redirect(url_for("get_blog_posts"))
+
+
+@app.route("/add_comment/<blog_post_id>", methods=["GET", "POST"])
+def add_comment(blog_post_id):
+    if request.method == "POST":
+        comment = {
+            "comment_content": request.form.get("comment_content"),
+            "blog_post_id" : ObjectId(blog_post_id),
+            "username": session["user"]
+            }
+        mongo.db.comments.insert_one(comment)
+        flash("New Comment Successfully Added")
+        return redirect(url_for("read_post", blog_post_id=blog_post_id))
+
+    return render_template("read_post.html")
 
 
 if __name__ == "__main__":

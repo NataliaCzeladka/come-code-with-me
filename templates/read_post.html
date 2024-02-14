@@ -15,38 +15,40 @@
     </form>
 </div>
 
-<div class="row black form-outer">
-    <div class="col s12">
-        <h4>Comments:</h4>
-        <ul>
-            {% for comment in comments %}
-            <li>
-                <span class="brown-text text-lighten-1">{{ comments.username }}:</span>
-                <span>{ comments.comment_content }</span>
-            </li>
-            {% endfor %}
-        </ul>
-    </div>
-    <form method="POST" action="{{ url_for('add_comment', blog_post_id=blog_post._id) }}">
-        <div class="row extra-padding">
-            {% if session.user %}
-            <div class="input-field col s12">
-                <i class="fa-solid fa-comment-dots prefix"></i>
-                <input id="comment_content" name="comment_content" type="text" minlength="5" maxlength="80" required>
-                <label for="comment_content">Add New Comment</label>
-            </div>
-            {% endif %}
-            <div class="center-align col s12">
-                {% if session.user %}
-                <button type="submit" class="btn btn-medium btn-mocha">
-                    <i class="fa-regular fa-floppy-disk white-text left"></i> Save Comment
-                </button>
-                {% else %}
-                <h3 class="sacramento">Sign into your account to add comments</h3>
-                {% endif %}
-            </div>
+<div class="row">
+    <div class="col s12 m8 offset-m2 black form-outer">
+        <div>
+            <h4>Comments:</h4>
+            <ul>
+                {% for comment in comments %}
+                <li>
+                    <span class="brown-text text-lighten-1">Username {{ comment.username|upper }} wrote:</span>
+                    <span>{{ comment.comment_content }}</span>
+                </li>
+                {% endfor %}
+            </ul>
         </div>
-    </form>
+        <form method="POST" action="{{ url_for('add_comment', blog_post_id=blog_post._id) }}">
+            <div class="extra-padding">
+                {% if session.user %}
+                <div class="input-field">
+                    <i class="fa-solid fa-comment-dots prefix"></i>
+                    <input id="comment_content" name="comment_content" type="text" minlength="5" maxlength="80" required>
+                    <label for="comment_content">Add New Comment</label>
+                </div>
+                {% endif %}
+                <div class="center-align">
+                    {% if session.user %}
+                    <button type="submit" class="btn btn-medium btn-mocha">
+                        <i class="fa-regular fa-floppy-disk white-text left"></i> Save Comment
+                    </button>
+                    {% else %}
+                    <h3 class="sacramento">Sign into your account to add comments</h3>
+                    {% endif %}
+                </div>
+            </div>
+        </form>
+    </div>
 </div>
 
 {% endblock %}
