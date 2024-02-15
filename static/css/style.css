@@ -236,6 +236,10 @@ input, textarea {
     color: #ad7c54;
 }
 
+.modal-trigger {
+    margin: 5px 0;
+}
+
 footer {
     font-family: 'Stint Ultra Expanded', serif;
     font-size: 110%;
