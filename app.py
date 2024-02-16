@@ -178,6 +178,18 @@ def add_comment(blog_post_id):
     return render_template("read_post.html")
 
 
+@app.route("/edit_comment/<comment_id>", methods=["POST"])
+def edit_comment(comment_id):
+    if request.method == "POST":
+        edited_content = request.form.get("edited_comment_content")
+        mongo.db.comments.update_one(
+            {"_id": ObjectId(comment_id)},
+            {"$set": {"comment_content": edited_content}}
+        )
+        flash("Comment Successfully Edited")
+        return redirect(request.referrer)
+
+
 @app.route("/delete_comment/<comment_id>")
 def delete_comment(comment_id):
     mongo.db.comments.delete_one({"_id": ObjectId(comment_id)})
