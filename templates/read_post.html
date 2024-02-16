@@ -30,11 +30,12 @@
                             type="button"><i class="fa-regular fa-pen-to-square"></i> Edit</button>
                         <div id="editModal{{ comment._id }}" class="modal">
                             <div class="modal-content">
-                                <h5 class="black-text"><i class="fa-solid fa-pen-to-square left"></i> {{ comment.username }}, would you like to edit your comment: "{{ comment.comment_content }}"?</h5>
+                                <h5 class="black-text"><i class="fa-solid fa-pen-to-square left"></i> {{
+                                    comment.username }}, would you like to edit your comment: "{{
+                                    comment.comment_content }}"?</h5>
                             </div>
                             <div class="modal-footer">
-                                <a href="#!"
-                                    class="modal-close waves-effect waves-green btn-small btn-mocha"><i
+                                <a href="#!" class="modal-close waves-effect waves-green btn-small btn-mocha"><i
                                         class="fa-solid fa-check"></i> Edit</a>
                                 <a href="#!" class="modal-close waves-effect waves-green btn-small btn-mocha"><i
                                         class="fa-solid fa-xmark"></i> Cancel</a>
@@ -46,7 +47,8 @@
                             type="button"><i class="fa-solid fa-trash"></i> Delete</button>
                         <div id="deleteModal{{ comment._id }}" class="modal">
                             <div class="modal-content">
-                                <h5 class="black-text"><i class="fa-solid fa-trash left"></i> {{ comment.username }}, are you sure you want to
+                                <h5 class="black-text"><i class="fa-solid fa-trash left"></i> {{ comment.username }},
+                                    are you sure you want to
                                     delete your comment:"{{ comment.comment_content }}"?</h5>
                             </div>
                             <div class="modal-footer">
@@ -79,7 +81,9 @@
                         <i class="fa-regular fa-floppy-disk white-text left"></i> Save Comment
                     </button>
                     {% else %}
-                    <h3 class="sacramento">Sign into your account to add comments</h3>
+                    <h3 class="sacramento"><a href="{{ url_for('sign_in')}}" class="internal-link"
+                        aria-label="It opens Sign In page"><i class="fa-solid fa-arrow-right-to-bracket"></i> 
+                        Sign into your account to add comments</a></h3>
                     {% endif %}
                 </div>
             </div>
