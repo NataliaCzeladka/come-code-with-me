@@ -25,12 +25,28 @@
                     <span class="brown-text text-lighten-2">User {{ comment.username|upper }} wrote:</span>
                     <span>{{ comment.comment_content }}</span>
                     <span>
-                        <button data-target="modal{{ comment._id }}" class="btn modal-trigger red lighten-1"
-                            type="button">Delete</button>
-                        <div id="modal{{ comment._id }}" class="modal">
+                        <button data-target="editModal{{ comment._id }}" class="btn btn-small btn-mocha modal-trigger"
+                            type="button"><i class="fa-regular fa-pen-to-square"></i> Edit</button>
+                        <div id="editModal{{ comment._id }}" class="modal">
                             <div class="modal-content">
-                                <h5 class="black-text"><i class="fa-solid fa-trash left"></i> Are you sure you want to
-                                    delete this comment?</h5>
+                                <h5 class="black-text"><i class="fa-solid fa-pen-to-square left"></i> {{ comment.username }}, would you like to edit your comment: "{{ comment.comment_content }}"?</h5>
+                            </div>
+                            <div class="modal-footer">
+                                <a href="#!"
+                                    class="modal-close waves-effect waves-green btn-small btn-mocha"><i
+                                        class="fa-solid fa-check"></i> Edit</a>
+                                <a href="#!" class="modal-close waves-effect waves-green btn-small btn-mocha"><i
+                                        class="fa-solid fa-xmark"></i> Cancel</a>
+                            </div>
+                        </div>
+                    </span>
+                    <span>
+                        <button data-target="deleteModal{{ comment._id }}" class="btn btn-small btn-mocha modal-trigger"
+                            type="button"><i class="fa-solid fa-trash"></i> Delete</button>
+                        <div id="deleteModal{{ comment._id }}" class="modal">
+                            <div class="modal-content">
+                                <h5 class="black-text"><i class="fa-solid fa-trash left"></i> {{ comment.username }}, are you sure you want to
+                                    delete your comment:"{{ comment.comment_content }}"?</h5>
                             </div>
                             <div class="modal-footer">
                                 <a href="{{ url_for('delete_comment', comment_id=comment._id) }}"
@@ -50,7 +66,7 @@
                 {% if session.user %}
                 <div class="input-field">
                     <i class="fa-solid fa-comment-dots prefix"></i>
-                    <input id="comment_content" name="comment_content" type="text" minlength="5" maxlength="80"
+                    <input id="comment_content" name="comment_content" type="text" minlength="5" maxlength="1000"
                         required>
                     <label for="comment_content">Add New Comment</label>
                 </div>
