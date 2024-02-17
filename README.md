@@ -45,8 +45,8 @@ The colour scheme of "Come Code with Me" was derived from its background image a
 
 I used [Coolors](https://coolors.co/ffffff-ad7c54-9b5720-8f501d-3f1403-000000) to generate my colour palette.
 
-![Colour Palette](static/images/colour_palette.png)
-![Background Image](static/images/shutterstock_2189462235.webp)
+![Colour Palette](documentation/colour_palette.png)
+![Background Image](documentation/shutterstock_2189462235.webp)
 
 ### Typography
 
@@ -56,11 +56,11 @@ The [Stint Ultra Expanded](https://fonts.google.com/specimen/Stint+Ultra+Expande
 
 The [Pontano Sans](https://fonts.google.com/specimen/Pontano+Sans) is a contemporary sans-serif font that features a clean and modern design with minimalistic letterforms. Pontano Sans prioritizes legibility, making it easy to read even at small sizes. Its balanced proportions, contemporary aesthetic and clean lines ensure clear communication of text. It was used for blog posts' content.
 
-![Font Pairing](static/images/fonts.png)
+![Font Pairing](documentation/fonts.png)
 
 Additionally, a [Sacramento](https://fonts.google.com/specimen/Sacramento) font was introduced specifically for messages directly from the blog author. The selection of this font was deliberate, as it perfectly imitates handwriting and adds a personal touch to the website, which creates a welcoming and approachable tone, making it ideal for conveying the author's thoughts, reflections, and updates in a warm and engaging manner.
 
-![Sacramento Font](static/images/sacramento.png)
+![Sacramento Font](documentation/sacramento.png)
 
 [Font Awesome](https://fontawesome.com/) icons were used throughout the site, such as social media icons in the footer, or visual representations of forms' input fields.
 
