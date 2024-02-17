@@ -421,6 +421,10 @@ footer div {
         padding: 10px;
     }
 
+    .intro div h4 {
+        font-size: 200%;
+    }
+
     .sacramento {
         font-size: 180%;
     }
@@ -438,7 +442,7 @@ footer div {
     }
 
     nav {
-        min-height: 70vw;
+        min-height: 60vw;
     }
     
     .blog-name h1 {
@@ -454,6 +458,10 @@ footer div {
     .intro div img {
         width: 100%;
         padding: 10px;
+    }
+
+    .intro div h4 {
+        font-size: 200%;
     }
 
     .form-outer h3 { 
@@ -489,6 +497,10 @@ footer div {
     .intro div img {
         width: 100%;
         padding: 10px;
+    }
+
+    .intro div h4 {
+        font-size: 200%;
     }
 
     .form-outer h3 { 
