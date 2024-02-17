@@ -1,38 +1,40 @@
 {% extends "base.html" %}
 {% block content %}
 
-    
-    <div class="row">
-        <form class="col s12 m8 l6 offset-l3" method="POST" action="{{ url_for('sign_up') }}">
-            <div class="card-panel black-transparent form-outer">
-                <h3 class="center-align form-title">Create Your Account</h3>
-                <h6 class="center-align form-title">Already registered? Please, <a href="{{ url_for('sign_in')}}" class="internal-link" aria-label="It opens Sign In page"><i class="fa-solid fa-arrow-right-to-bracket"></i> sign in</a>.</h6>
-                <!-- username -->
-                <div class="row">
-					<div class="input-field col s12">
-						<i class="fas fa-user-plus prefix"></i>
-						<input id="username" name="username" type="text" minlength="5"
-                        maxlength="15" pattern="^[a-zA-Z0-9]{5,15}$" class="validate white-text" required>
-						<label for="username">Username</label>
-					</div>
-                </div>
-                <!-- passowrd -->
-                <div class="row">
-                    <div class="input-field col s12">
-						<i class="fas fa-user-lock prefix"></i>
-                        <input id="password" name="password" type="password" minlength="5"
-                        maxlength="15" pattern="^[a-zA-Z0-9]{5,15}$" class="validate white-text" required>
-                        <label for="password">Password</label>
-                    </div>
-                </div>
-                <!-- sign up -->
-                <div class="row">
-                    <button type="submit" class="col s6 offset-s3 btn-large btn-mocha">
-                        Sign Up <i class="fas fa-sign-in-alt"></i>
-                    </button>
+
+<div class="row">
+    <form class="col s10 offset-s1 m8 offset-m2 xl6 offset-xl3" method="POST" action="{{ url_for('sign_up') }}">
+        <div class="card-panel black-transparent form-outer">
+            <h3 class="center-align form-title">Create Your Account</h3>
+            <h6 class="center-align form-title">Already registered? Please, <a href="{{ url_for('sign_in')}}"
+                    class="internal-link" aria-label="It opens Sign In page"><i
+                        class="fa-solid fa-arrow-right-to-bracket"></i> sign in</a>.</h6>
+            <!-- username -->
+            <div class="row">
+                <div class="input-field col s12">
+                    <i class="fas fa-user-plus prefix"></i>
+                    <input id="username" name="username" type="text" minlength="5" maxlength="15"
+                        pattern="^[a-zA-Z0-9]{5,15}$" class="validate white-text" required>
+                    <label for="username">Username</label>
                 </div>
             </div>
-        </form>
-    </div>
+            <!-- passowrd -->
+            <div class="row">
+                <div class="input-field col s12">
+                    <i class="fas fa-user-lock prefix"></i>
+                    <input id="password" name="password" type="password" minlength="5" maxlength="15"
+                        pattern="^[a-zA-Z0-9]{5,15}$" class="validate white-text" required>
+                    <label for="password">Password</label>
+                </div>
+            </div>
+            <!-- sign up -->
+            <div class="row">
+                <button type="submit" class="col s6 offset-s3 btn-large btn-mocha">
+                    Sign Up <i class="fas fa-sign-in-alt"></i>
+                </button>
+            </div>
+        </div>
+    </form>
+</div>
 
 {% endblock %}

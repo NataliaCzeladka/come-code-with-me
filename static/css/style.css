@@ -22,11 +22,15 @@ body {
 
 main {
     flex: 1 0 auto;
-    padding: 2% 0;
+    padding: 1% 0;
+}
+
+header {
+    padding: 5px;
 }
 
 nav {
-    min-height: 10vw;
+    min-height: 11vw;
 }
 
 .black-transparent {
@@ -45,10 +49,12 @@ nav {
 .blog-name h1 {
     color: #9b5720;
     font-family: 'Stint Ultra Expanded', serif;
+    font-size: 160%;
     text-shadow: #000 0px 0px 1px,   #000 0px 0px 1px,   #000 0px 0px 1px,
         #000 0px 0px 1px,   #000 0px 0px 1px,   #000 0px 0px 1px,
         #000 0px 0px 1px,   #000 0px 0px 1px,   #000 0px 0px 1px,
         #000 0px 0px 1px,   #000 0px 0px 1px,   #000 0px 0px 1px;
+    padding: 15px 0 0 0;
 }
 
 .blog-name h6 {
@@ -59,7 +65,7 @@ nav {
 
 .nav-extended ul li a {
     font-family: 'Stint Ultra Expanded', serif;
-    font-size: 110%;
+    font-size: 120%;
     letter-spacing: 1px;
 }
 
@@ -74,6 +80,7 @@ nav {
 .intro div img {
     background-color: #000;
     display: block;
+    margin: 0 auto 30px auto;
     width: 80%;
     padding: 20px;
     border: solid #fff 1px;
@@ -283,6 +290,10 @@ footer div {
 
 @media screen and (min-width: 1201px) and (max-width: 1400px) {
     
+    main {
+        padding: 3% 0;
+    }
+
     nav {
         min-height: 13vw;
     }
@@ -294,27 +305,45 @@ footer div {
     .blog-name h6 {
         font-size: 40%;
     }
+
+    .intro div img {
+        width: 90%;
+        padding: 20px;
+    }
 }
 
 @media screen and (min-width: 991px) and (max-width: 1200px) {
 
+    main {
+        padding: 3% 0;
+    }
+
     nav {
-        min-height: 15vw;
+        min-height: 19vw;
     }
     
     .blog-name h1 {
-        font-size: 130%;
+        font-size: 150%;
     }
 
     .blog-name h6 {
-        font-size: 40%;
+        font-size: 50%;
+    }
+
+    .intro div img {
+        width: 70%;
+        padding: 20px;
     }
 }
 
 @media screen and (min-width: 769px) and (max-width: 990px) {
 
+    main {
+        padding: 3% 0;
+    }
+
     nav {
-        min-height: 21vw;
+        min-height: 23vw;
     }
     
     .blog-name h1 {
@@ -324,13 +353,27 @@ footer div {
 
     .blog-name h6 {
         font-size: 40%;
+    }
+
+    .intro div img {
+        width: 70%;
+        padding: 20px;
+    }
+
+    .form-outer h3 { 
+        font-size: 220%;
+        margin: 15px 10px;
     }
 }
 
 @media screen and (min-width: 576px) and (max-width: 768px) {
 
+    main {
+        padding: 3% 0;
+    }
+
     nav {
-        min-height: 28vw;
+        min-height: 30vw;
     }
     
     .blog-name h1 {
@@ -341,12 +384,26 @@ footer div {
     .blog-name h6 {
         font-size: 40%;
     }
+
+    .intro div img {
+        width: 100%;
+        padding: 10px;
+    }
+
+    .form-outer h3 { 
+        font-size: 200%;
+        margin: 15px 10px;
+    }
 }
 
 @media screen and (min-width: 450px) and (max-width: 575px) {
 
+    main {
+        padding: 3% 0;
+    }
+
     nav {
-        min-height: 40vw;
+        min-height: 42vw;
     }
     
     .blog-name h1 {
@@ -358,38 +415,88 @@ footer div {
         font-size: 40%;
         line-height: 130%;
     }
+
+    .intro div img {
+        width: 100%;
+        padding: 10px;
+    }
+
+    .sacramento {
+        font-size: 180%;
+    }
+
+    .form-outer h3 { 
+        font-size: 200%;
+        margin: 15px 10px;
+    }
 }
 
 @media screen and (min-width: 330px) and (max-width: 449px) {
 
-    nav {
-        min-height: 50vw;
+    main {
+        padding: 3% 0;
     }
-    
-    .blog-name h1 {
-        font-size: 90%;
-        line-height: 100%;
-    }
-
-    .blog-name h6 {
-        font-size: 40%;
-        line-height: 120%;
-    }
-}
-
-@media screen and (max-width: 329px) {
 
     nav {
         min-height: 70vw;
     }
     
     .blog-name h1 {
-        font-size: 90%;
+        font-size: 100%;
         line-height: 100%;
     }
 
     .blog-name h6 {
-        font-size: 40%;
+        font-size: 50%;
         line-height: 120%;
+    }
+
+    .intro div img {
+        width: 100%;
+        padding: 10px;
+    }
+
+    .form-outer h3 { 
+            font-size: 160%;
+            margin: 15px 10px;
+        }
+
+    footer {
+        font-size: 90%;
+    }
+}
+
+@media screen and (max-width: 329px) {
+
+    main {
+        padding: 3% 0;
+    }
+
+    nav {
+        min-height: 90vw;
+    }
+    
+    .blog-name h1 {
+        font-size: 100%;
+        line-height: 100%;
+    }
+
+    .blog-name h6 {
+        font-size: 50%;
+        line-height: 120%;
+    }
+
+    .intro div img {
+        width: 100%;
+        padding: 10px;
+    }
+
+    .form-outer h3 { 
+        font-size: 160%;
+        margin: 15px 10px;
+    }
+
+    footer {
+        font-size: 90%;
     }
 }
