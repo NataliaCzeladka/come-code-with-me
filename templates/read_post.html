@@ -24,7 +24,7 @@
                 <li>
                     <span class="brown-text text-lighten-2">User {{ comment.username|upper }} wrote:</span>
                     <span>{{ comment.comment_content }}</span>
-                    {% if session.user|lower == comment.username|lower %}
+                    {% if session.user|lower == comment.username|lower or session.user|lower == "admin" %}
                     <span>
                         <button data-target="editModal{{ comment._id }}" class="btn btn-small btn-mocha modal-trigger"
                             type="button"><i class="fa-regular fa-pen-to-square"></i> Edit</button>
