@@ -241,6 +241,12 @@ input, textarea {
     margin: 5px 0;
 }
 
+.even {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 footer {
     font-family: 'Stint Ultra Expanded', serif;
     font-size: 110%;

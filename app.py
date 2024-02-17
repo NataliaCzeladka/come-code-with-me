@@ -105,6 +105,10 @@ def sign_out():
 
 @app.route("/add_blog_post", methods=["GET", "POST"])
 def add_blog_post():
+    if "user" not in session or session["user"].lower() != "admin":
+        flash("Access denied. You must be an Admin to add blog posts.")
+        return redirect(url_for("get_blog_posts"))
+
     if request.method == "POST":
         is_new = "on" if request.form.get("is_new") else "off"
         blog_post = {
@@ -136,6 +140,10 @@ def read_post(blog_post_id):
 
 @app.route("/edit_blog_post/<blog_post_id>", methods=["GET", "POST"])
 def edit_blog_post(blog_post_id):
+    if "user" not in session or session["user"].lower() != "admin":
+        flash("Access denied. You must be an Admin to edit blog posts.")
+        return redirect(url_for("get_blog_posts"))
+
     if request.method == "POST":
         is_new = "on" if request.form.get("is_new") else "off"
         submit = {
@@ -158,6 +166,10 @@ def edit_blog_post(blog_post_id):
 
 @app.route("/delete_blog_post/<blog_post_id>")
 def delete_blog_post(blog_post_id):
+    if "user" not in session or session["user"].lower() != "admin":
+        flash("Access denied. You must be an Admin to delete blog posts.")
+        return redirect(url_for("get_blog_posts"))
+
     mongo.db.blog_posts.delete_one({"_id": ObjectId(blog_post_id)})
     flash("Blog Post Successfully Deleted")
     return redirect(url_for("get_blog_posts"))
