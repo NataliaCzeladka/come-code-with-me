@@ -20,17 +20,13 @@ body {
     flex-direction: column;
 }
 
+header {
+    padding: 0 5px;
+}
+
 main {
     flex: 1 0 auto;
     padding: 2% 0;
-}
-
-header {
-    padding: 5px;
-}
-
-nav {
-    min-height: 11vw;
 }
 
 .black-transparent {
@@ -46,18 +42,20 @@ nav {
 .blog-name h1 {
     color: #9b5720;
     font-family: 'Stint Ultra Expanded', serif;
-    font-size: 180%;
+    font-size: 380%;
     text-shadow: #000 0px 0px 1px,   #000 0px 0px 1px,   #000 0px 0px 1px,
         #000 0px 0px 1px,   #000 0px 0px 1px,   #000 0px 0px 1px,
         #000 0px 0px 1px,   #000 0px 0px 1px,   #000 0px 0px 1px,
         #000 0px 0px 1px,   #000 0px 0px 1px,   #000 0px 0px 1px;
-    padding: 15px 0 0 0;
+        margin-top: 0;
 }
 
 .blog-name h6 {
     font-family: 'Stint Ultra Expanded', serif;
     letter-spacing: 5px;
-    line-height: 90%;
+    line-height: 50%;
+    color: #fafafa;
+    margin-bottom: 30px;
 }
 
 .nav-extended ul li a {
@@ -256,6 +254,7 @@ footer {
     font-size: 110%;
     letter-spacing: 1px;
     padding: 20px;
+    margin: 0;
 }
 
 footer a {
@@ -274,33 +273,14 @@ footer div {
 
 /* Media Queries */
 
-@media screen and (min-width: 1401px) and (max-width: 1550px) {
-
-    .blog-name h1 {
-        font-size: 160%;
-    }
-
-    .blog-name h6 {
-        font-size: 50%;
-    }
-}
-
-@media screen and (min-width: 1201px) and (max-width: 1400px) {
+@media screen and (max-width: 1400px) {
     
     main {
         padding: 3% 0;
     }
-
-    nav {
-        min-height: 13vw;
-    }
     
     .blog-name h1 {
-        font-size: 150%;
-    }
-
-    .blog-name h6 {
-        font-size: 40%;
+        font-size: 350%;
     }
 
     .intro div img {
@@ -314,17 +294,13 @@ footer div {
     main {
         padding: 3% 0;
     }
-
-    nav {
-        min-height: 19vw;
-    }
     
     .blog-name h1 {
-        font-size: 150%;
+        font-size: 350%;
     }
 
     .blog-name h6 {
-        font-size: 50%;
+        font-size: 90%;
     }
 
     .intro div img {
@@ -338,18 +314,14 @@ footer div {
     main {
         padding: 3% 0;
     }
-
-    nav {
-        min-height: 23vw;
-    }
     
     .blog-name h1 {
-        font-size: 130%;
+        font-size: 350%;
         line-height: 110%;
     }
 
     .blog-name h6 {
-        font-size: 40%;
+        font-size: 90%;
     }
 
     .intro div img {
@@ -368,18 +340,14 @@ footer div {
     main {
         padding: 3% 0;
     }
-
-    nav {
-        min-height: 30vw;
-    }
     
     .blog-name h1 {
-        font-size: 130%;
+        font-size: 320%;
         line-height: 110%;
     }
 
     .blog-name h6 {
-        font-size: 40%;
+        font-size: 90%;
     }
 
     .intro div img {
@@ -398,18 +366,14 @@ footer div {
     main {
         padding: 3% 0;
     }
-
-    nav {
-        min-height: 42vw;
-    }
     
     .blog-name h1 {
-        font-size: 110%;
+        font-size: 250%;
         line-height: 100%;
     }
 
     .blog-name h6 {
-        font-size: 40%;
+        font-size: 90%;
         line-height: 130%;
     }
 
@@ -437,18 +401,14 @@ footer div {
     main {
         padding: 3% 0;
     }
-
-    nav {
-        min-height: 60vw;
-    }
     
     .blog-name h1 {
-        font-size: 100%;
+        font-size: 250%;
         line-height: 100%;
     }
 
     .blog-name h6 {
-        font-size: 50%;
+        font-size: 90%;
         line-height: 120%;
     }
 
@@ -476,18 +436,14 @@ footer div {
     main {
         padding: 3% 0;
     }
-
-    nav {
-        min-height: 90vw;
-    }
     
     .blog-name h1 {
-        font-size: 100%;
+        font-size: 220%;
         line-height: 100%;
     }
 
     .blog-name h6 {
-        font-size: 50%;
+        font-size: 90%;
         line-height: 120%;
     }
 
