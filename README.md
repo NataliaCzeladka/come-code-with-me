@@ -10,14 +10,7 @@ The site consists of three pages: Home (where the blog author introduces herself
 
 - [Come Code with Me - My Coding Journey](#come-code-with-me---my-coding-journey)
   - [Table of Contents](#table-of-contents)
-  - [User Experience (UX)](#user-experience-ux)
-    - [User Stories](#user-stories)
-      - [Client Goals](#client-goals)
-      - [First Time User Goals](#first-time-user-goals)
-      - [Returning/Frequent User Goals](#returningfrequent-user-goals)
   - [Design](#design)
-    - [Colour Scheme](#colour-scheme)
-    - [Typography](#typography)
     - [Imagery](#imagery)
     - [Wireframes](#wireframes)
     - [Features](#features)
@@ -36,6 +29,47 @@ The site consists of three pages: Home (where the blog author introduces herself
     - [Content](#content)
     - [Media](#media)
     - [Acknowledgements](#acknowledgements)
+
+## User Experience (UX)
+
+### User Stories
+
+#### Client Goals
+
+- To document their coding journey, track their progress, and reflect on their experiences as they learn and grow in web app development.
+- To showcase their personal projects and coding challenges to demonstrate their skills, creativity, and problem-solving abilities to potential employers, collaborators, and the broader tech community.
+- To share their insights and discoveries in web app development and emerging technologies with others in the field, contributing to the community and encouraging knowledge exchange.
+- To connect with other students, developers, mentors, and professionals in the tech industry, fostering meaningful relationships, mentorship, and potential collaboration on projects or initiatives.
+- To seek feedback, advice, and support from their audience, peers, and mentors to improve their coding skills, overcome challenges, and navigate their career path in web app development effectively.
+- To inspire and motivate other aspiring developers by sharing their experiences, successes, failures, and lessons learned along their coding journey.
+- To build and enhance their personal brand as a competent and passionate web app developer, showcasing their portfolio, achievements, and expertise to potential employers and collaborators.
+- To attract job opportunities, internships, freelance projects, and career advancement opportunities through their blog, using it as a tool to market their skills, experience, and potential to prospective employers and recruiters.
+- To promote continuous learning, experimentation, and exploration of new technologies, frameworks, tools, and methodologies in web app development, enabling them to stay updated and adapt to the evolving landscape of the tech industry.
+- To deliver all of the above in the form of a visually appealing, intuitive, responsive across different devices and easy to navigate website.
+
+#### First-Time User Goals
+
+- To understand the purpose and focus of the website, including the student's goals, interests, areas of expertise, and the type of content they can expect to find.
+- To learn more about the student behind the blog, including their background, interests, skills, achievements, and the story behind their coding journey.
+- To connect with the student through social media, or other channels, providing feedback, asking questions, sharing their own experiences, or expressing interest in potential collaborations.
+- To find inspiration, insights, and valuable information that can help them learn more about web app development, coding best practices, new technologies, and industry trends.
+- To access resources, tools, tutorials, guides, and other educational materials that can help them improve their coding skills, learn new technologies, and advance their careers in web app development.
+- To navigate throughout the page and access relevant content in an easy, effortless and intuitive way.
+- To interact with the website's content seamlessly across different devices and screen sizes.
+- To have a positive and enjoyable experience while browsing the website.
+
+#### Returning User Goals
+
+- To access new blog posts, projects, articles, or updates since their last visit.
+- To engage continuously with the website's content by commenting on blog posts, asking questions, or participating in discussions related to coding topics and industry trends.
+- To offer feedback based on their experiences, helping to shape future updates and improvements.
+
+#### Frequent User Goals
+
+- To stay updated with the latest content, projects, and insights shared by the student on their coding journey.
+- To stay connected with the student and the community around the blog, including subscribing to newsletters, following social media updates, or joining forums or groups related to web app development.
+- To find solutions to specific coding challenges, troubleshoot issues, or learn new techniques and strategies in web app development based on their ongoing projects or interests.
+- To provide feedback, suggestions, or recommendations to help improve the website's content, user experience, navigation, or functionality, contributing to its continuous improvement and development.
 
 ## Design
 
