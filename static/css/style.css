@@ -22,7 +22,7 @@ body {
 
 main {
     flex: 1 0 auto;
-    padding: 1% 0;
+    padding: 2% 0;
 }
 
 header {
@@ -38,18 +38,15 @@ nav {
 }
 
 .card {
-    border: 2px solid #663914;
-    background-color: #b79a83ed;
-}
-
-.card .card-reveal {
-    background-color: #b79a83;
+    border: 1px solid #ad7c54;
+    padding: 20px;
+    background-color: #000;
 }
 
 .blog-name h1 {
     color: #9b5720;
     font-family: 'Stint Ultra Expanded', serif;
-    font-size: 160%;
+    font-size: 180%;
     text-shadow: #000 0px 0px 1px,   #000 0px 0px 1px,   #000 0px 0px 1px,
         #000 0px 0px 1px,   #000 0px 0px 1px,   #000 0px 0px 1px,
         #000 0px 0px 1px,   #000 0px 0px 1px,   #000 0px 0px 1px,

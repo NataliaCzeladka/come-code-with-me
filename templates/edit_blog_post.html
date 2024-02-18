@@ -31,21 +31,10 @@
                 <label for="headline">Headline</label>
             </div>
         </div>
-        <!-- blog introduction -->
-        <div class="row extra-padding">
-            <div class="input-field col s12">
-                <i class="fa-solid fa-align-left prefix"></i>
-                <textarea id="intro" name="intro" minlength="5" maxlength="350" 
-                    class="materialize-textarea validate" required>
-                {{- blog_post.intro -}}
-                </textarea>
-                <label for="intro">Intoduction</label>
-            </div>
-        </div>
         <!-- blog post body -->
         <div class="row extra-padding">
             <div class="input-field col s12">
-                <i class="fa-solid fa-pen-to-square prefix"></i>
+                <i class="fa-solid fa-align-left prefix"></i>
                 <textarea id="post_body" name="post_body" minlength="5" 
                     class="materialize-textarea validate" required>
                 {{- blog_post.post_body -}}
@@ -90,11 +79,11 @@
         </div>
         <div class="center-align">
             <!-- cancel editing -->            
-                <a href="{{ url_for('get_blog_posts') }}" class="btn-large btn-red btn-edit extra-margin white-text">
+                <a href="{{ url_for('get_blog_posts') }}" class="btn btn-medium btn-red btn-edit extra-margin white-text">
                     <i class="fa-solid fa-xmark white-text"></i>&nbsp;&nbsp;CANCEL
                 </a>
             <!-- edit button -->
-            <button type="submit" class="btn btn-large btn-green btn-edit extra-margin">
+            <button type="submit" class="btn btn-medium btn-green btn-edit extra-margin">
                 <a class="white-text ">
                     <i class="fa-solid fa-file-pen white-text"></i>&nbsp;&nbsp;EDIT
                 </a>   

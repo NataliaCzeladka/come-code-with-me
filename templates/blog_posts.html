@@ -6,29 +6,23 @@
 
         {% for blog_post in blog_posts %}
         <div class="col s12 m6 xl4">
-            <div class="card medium">
+            <div class="card large">
                 <div class="card-image waves-effect waves-block waves-light">
                     <img src='{{ blog_post.image_url }}'>
                 </div>
                 <div class="card-content">
-                    <span class="card-title grey-text text-darken-4">
+                    <div class="card-title grey-text text-darken-4">
                         {% if blog_post.is_new == "on" %}
-                        <i class="fa-solid fa-circle-exclamation tooltipped green-text text-darken-3"
+                        <i class="fa-regular fa-envelope left tooltipped white-text green-text text-darken-2"
                             data-position="left" data-tooltip="NEW POST!"></i>
                         {% endif %}
-                        <strong> {{ blog_post.headline }}</strong></span>
-                    <h6 class="black-text activator"><em>Category: {{ blog_post.category_name }}</em>
-                        <i class="fa-solid fa-ellipsis-vertical right"></i>
-                    </h6>
+                        <span class="white-text"> {{ blog_post.headline }}</span>
+                        <h6 class="white-text"><em>Category: {{ blog_post.category_name }}</em></h6>
+                    </div>
                 </div>
-                <div class="card-reveal">
-                    <span class="card-title grey-text text-darken-4"><strong>{{ blog_post.headline }}</strong><i
-                            class="fa-solid fa-xmark right"></i></span>
-                    <br>
-                    <p class="black-text">{{ blog_post.intro }}</p>
-                    <br>
-                    <p><a href="{{ url_for('read_post', blog_post_id=blog_post._id) }}" class="white-text">Read
-                            more...</a></p>
+                <div class="card-action">
+                    <p><a href="{{ url_for('read_post', blog_post_id=blog_post._id) }}" class="brown-text text-lighten-2">Read
+                            more ...</a></p>
                 </div>
             </div>
             {% if session.user == "admin" %}
