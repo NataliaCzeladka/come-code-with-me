@@ -70,21 +70,17 @@ main {
 
 .intro {
     padding-top: 20px;
+    border: solid #fff 1px;
+    border-radius: 20px;
 }
 
 .intro div img {
-    background-color: #000;
-    display: block;
-    margin: 0 auto 30px auto;
-    width: 80%;
-    padding: 20px;
-    border: solid #fff 1px;
-    border-radius: 20px;
+    width: 100%;
+    padding: 30px;
 }
 
-.intro-text {
-    border: solid #fff 1px;
-    border-radius: 20px;
+.intro span {
+    padding: 20px 0;
 }
 
 .intro div h4 {
@@ -224,9 +220,13 @@ input, textarea {
     background-color: #ad7c54;
 }
 
+.flash-container {
+    margin-top: 20px;
+    margin-bottom: 0;
+}
+
 .flash-msg {
     font-family: 'Sacramento', serif;
-    /* color:#ad7c54; */
     color: #fafafa;
     text-shadow: #000 0px 0px 1px,   #000 0px 0px 1px,   #000 0px 0px 1px,
         #000 0px 0px 1px,   #000 0px 0px 1px,   #000 0px 0px 1px,
@@ -282,11 +282,6 @@ footer div {
     .blog-name h1 {
         font-size: 350%;
     }
-
-    .intro div img {
-        width: 90%;
-        padding: 20px;
-    }
 }
 
 @media screen and (min-width: 991px) and (max-width: 1200px) {
@@ -301,11 +296,6 @@ footer div {
 
     .blog-name h6 {
         font-size: 90%;
-    }
-
-    .intro div img {
-        width: 70%;
-        padding: 20px;
     }
 }
 
@@ -322,11 +312,6 @@ footer div {
 
     .blog-name h6 {
         font-size: 90%;
-    }
-
-    .intro div img {
-        width: 70%;
-        padding: 20px;
     }
 
     .form-outer h3 { 
@@ -350,11 +335,6 @@ footer div {
         font-size: 90%;
     }
 
-    .intro div img {
-        width: 100%;
-        padding: 10px;
-    }
-
     .form-outer h3 { 
         font-size: 200%;
         margin: 15px 10px;
@@ -375,11 +355,6 @@ footer div {
     .blog-name h6 {
         font-size: 90%;
         line-height: 130%;
-    }
-
-    .intro div img {
-        width: 100%;
-        padding: 10px;
     }
 
     .intro div h4 {
@@ -412,11 +387,6 @@ footer div {
         line-height: 120%;
     }
 
-    .intro div img {
-        width: 100%;
-        padding: 10px;
-    }
-
     .intro div h4 {
         font-size: 200%;
     }
@@ -445,11 +415,6 @@ footer div {
     .blog-name h6 {
         font-size: 90%;
         line-height: 120%;
-    }
-
-    .intro div img {
-        width: 100%;
-        padding: 10px;
     }
 
     .intro div h4 {

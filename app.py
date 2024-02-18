@@ -244,7 +244,7 @@ def add_comment(blog_post_id):
 @app.route("/edit_comment/<comment_id>", methods=["POST"])
 @login_required
 def edit_comment(comment_id):
-    comment = mongo.db.comments.find({"_id": ObjectId(comment_id)})
+    comment = mongo.db.comments.find_one({"_id": ObjectId(comment_id)})
 
     # feature available only to the user who created a chosen commit or an admin
     if session["user"].lower() != comment["username"].lower() or session["user"].lower() != "admin":
@@ -265,7 +265,7 @@ def edit_comment(comment_id):
 @app.route("/delete_comment/<comment_id>")
 @login_required
 def delete_comment(comment_id):
-    comment = mongo.db.comments.find({"_id": ObjectId(comment_id)})
+    comment = mongo.db.comments.find_one({"_id": ObjectId(comment_id)})
 
     # feature available only to the user who created a chosen commit or an admin
     if session["user"].lower() != comment["username"].lower() or session["user"].lower() != "admin":

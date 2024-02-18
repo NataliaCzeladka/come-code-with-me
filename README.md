@@ -4,31 +4,7 @@
 
 The site consists of three pages: Home (where the blog author introduces herself), Blog (where all the blog posts are located), and Sign In/Out (where you can create a new account or log into the existing one), which is only visible if you're not signed in. If you already have an account and you're currently signed in, the third page you'll be able to see in the navbar will be Sign Out (where you can log out of your account). Adding comments to the blog posts is a functionality only available to registered users.
 
-"Come Code with Me" deployed website is available [here].
-
-## Table of Contents
-
-- [Come Code with Me - My Coding Journey](#come-code-with-me---my-coding-journey)
-  - [Table of Contents](#table-of-contents)
-  - [Design](#design)
-    - [Imagery](#imagery)
-    - [Wireframes](#wireframes)
-    - [Features](#features)
-      - [Existing Features](#exisiting-features)
-      - [Future Implementations](#future-implementations)
-  - [Technologies Used](#technologies-used)
-    - [Languages Used](#languages-used)
-    - [Frameworks, Libraries and Programs Used](#frameworks-libraries-and-programs-used)
-  - [Testing](#testing)
-  - [Deployment](#deployment)
-    - [Deploying the project to GitHub Pages](#deploying-the-project-to-github-pages)
-    - [Forking the GitHub repository](#forking-the-github-repository)
-    - [Making a local clone](#making-a-local-clone)
-  - [Credits](#credits)
-    - [Code](#code)
-    - [Content](#content)
-    - [Media](#media)
-    - [Acknowledgements](#acknowledgements)
+The "Come Code with Me" deployed website is available [here].
 
 ## User Experience (UX)
 
