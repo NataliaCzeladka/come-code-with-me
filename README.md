@@ -1,10 +1,12 @@
 # Come Code with Me - My Coding Journey
 
-"Come Code with Me" is a fictional blog of a Web Application Development student, who shares her coding journey, discoveries, and insights into the tech world. From hackathons and coding challenges to embracing new technologies, she writes about the triumphs and tribulations of her educational odyssey. 
+"Come Code with Me" is a fictional blog created by a Web Application Development student, who shares her coding journey, discoveries, and insights into the tech world. From hackathons and coding challenges to embracing new technologies, she writes about the triumphs and tribulations of her educational odyssey.
 
-The site consists of three pages: Home (where the blog author introduces herself), Blog (where all the blog posts are located), and Sign In/Out (where you can create a new account or log into the existing one), which is only visible if you're not signed in. If you already have an account and you're currently signed in, the third page you'll be able to see in the navbar will be Sign Out (where you can log out of your account). Adding comments to the blog posts is a functionality only available to registered users.
+The site consists of three pages: Home (where the blog author introduces herself), Blog (where all the blog posts are located), and Sign In/Up. The Sign In/Up page allows users to create a new account or log into an existing one. If you're already signed in, you'll see the Sign Out option in the navbar, allowing you to log out of your account. Adding comments to blog posts, as well as editing or deleting them, is only available to registered users. Adding new blog posts, editing, and deleting them are functionalities restricted to an admin.
 
-The "Come Code with Me" deployed website is available [here].
+![Come Code with Me](documentation/mockup.png)
+
+You can access the deployed "Come Code with Me" website [here](https://come-code-with-me-43691c30d81d.herokuapp.com/home).
 
 ## User Experience (UX)
 
