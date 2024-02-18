@@ -231,13 +231,13 @@ input, textarea {
 
 .flash-msg {
     font-family: 'Sacramento', serif;
-    color:#ad7c54;
+    /* color:#ad7c54; */
+    color: #fafafa;
     text-shadow: #000 0px 0px 1px,   #000 0px 0px 1px,   #000 0px 0px 1px,
         #000 0px 0px 1px,   #000 0px 0px 1px,   #000 0px 0px 1px,
         #000 0px 0px 1px,   #000 0px 0px 1px,   #000 0px 0px 1px,
         #000 0px 0px 1px,   #000 0px 0px 1px,   #000 0px 0px 1px;
-    background-color: #00000095;
-    margin: 10px;
+    background-color: #ad7c5495;
 }
 
 .internal-link {
