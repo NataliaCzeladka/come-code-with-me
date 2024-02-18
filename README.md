@@ -56,7 +56,6 @@ The colour scheme of "Come Code with Me" was derived from its background image a
 I used [Coolors](https://coolors.co/ffffff-ad7c54-9b5720-8f501d-3f1403-000000) to generate my colour palette.
 
 ![Colour Palette](documentation/colour_palette.png)
-![Background Image](documentation/shutterstock_2189462235.webp)
 
 ### Typography
 
@@ -73,6 +72,19 @@ Additionally, a [Sacramento](https://fonts.google.com/specimen/Sacramento) font 
 ![Sacramento Font](documentation/sacramento.png)
 
 [Font Awesome](https://fontawesome.com/) icons were used throughout the site, such as social media icons in the footer, or visual representations of forms' input fields.
+
+### Imagery
+
+Images play a crucial role in enhancing the overall user experience, making the content more engaging. However, the website currently features only two: the background picture and the animated representation of the blog owner on the home page. This limitation stems from the fact that each blog post will include a featured image, added by the blog owner while composing the remaining content, to represent its main topic. Such images will be showcased in both blog post previews and the full post pages.
+
+The background picture was sourced from the leading provider of stock photography, [Shutterstock](https://www.shutterstock.com/).
+
+![Background Image](documentation/shutterstock_2189462235.webp)
+
+The animated image of the blog owner was AI-generated using [Midjourney](https://www.midjourney.com/home?callbackUrl=%2Fexplore).
+
+![Home Page Picture](static/images/come_code_with_me_2.png)
+
 
 ## Technologies Used
 

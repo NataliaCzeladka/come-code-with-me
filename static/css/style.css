@@ -357,6 +357,10 @@ footer div {
         line-height: 130%;
     }
 
+    .intro div img {
+        padding: 10px;
+    }
+
     .intro div h4 {
         font-size: 200%;
     }
@@ -387,6 +391,10 @@ footer div {
         line-height: 120%;
     }
 
+    .intro div img {
+        padding: 10px;
+    }
+
     .intro div h4 {
         font-size: 200%;
     }
@@ -415,6 +423,10 @@ footer div {
     .blog-name h6 {
         font-size: 90%;
         line-height: 120%;
+    }
+
+    .intro div img {
+        padding: 10px;
     }
 
     .intro div h4 {
