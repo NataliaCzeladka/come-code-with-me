@@ -87,6 +87,16 @@ The animated image of the blog owner was AI-generated using [Midjourney](https:/
 
 ![Home Page Picture](static/images/come_code_with_me_2.png)
 
+### Wireframes
+
+Wireframes were created using [Balsamiq](https://balsamiq.com/wireframes/) - the industry's top wireframing software.
+
+| Size | Screenshot |
+| --- | --- |
+| Mobile | ![Mobile Wireframes1](documentation/mobile1.png)![Mobile Wireframes2](documentation/mobile2.png) |
+| Tablet | ![Tablet Wireframes1](documentation/tablet1.png)![Tablet Wireframes2](documentation/tablet2.png) |
+| Desktop | ![Desktop Wireframes1](documentation/desktop1.png)![Desktop Wireframes2](documentation/desktop2.png) |
+
 
 ## Technologies Used
 
