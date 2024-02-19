@@ -26,7 +26,7 @@ def login_required(f):
     def decorated_function(*args, **kwargs):
         # no "user" in session
         if "user" not in session:
-            flash("You must sign in to access this page.")
+            flash("You must sign in to access this page")
             return redirect(url_for("sign_in"))
         # user is in session
         return f(*args, **kwargs)

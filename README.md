@@ -97,6 +97,70 @@ Wireframes were created using [Balsamiq](https://balsamiq.com/wireframes/) - the
 | Tablet | ![Tablet Wireframes1](documentation/tablet1.png)![Tablet Wireframes2](documentation/tablet2.png) |
 | Desktop | ![Desktop Wireframes1](documentation/desktop1.png)![Desktop Wireframes2](documentation/desktop2.png) |
 
+### Features
+
+#### Existing Features
+
+"Come Code with Me" consists of three pages: Home (where the blog author introduces herself), Blog (where all the blog posts are located), and Sign In/Up. The Sign In/Up page allows users to create a new account or log into an existing one. If you're already signed in, you'll see the Sign Out option in the navbar (replacing the Sign In/Up), allowing you to log out of your account. 
+
+Adding comments to blog posts, as well as editing or deleting them, is only available to registered users. Adding new blog posts, editing, and deleting them are functionalities restricted to an admin.
+
+Some features are common to all of the pages. These include:
+
+- **Page Header** - It features a centered logo comprising the blog's name and a subtitle in capital letters (notably smaller in size). Positioned in the top right corner is a responsive navigation element that collapses into a hamburger menu on medium and small devices. Links to all three pages change colour when hovered over by a user. The collapsed menu also contains links to all three pages. Upon clicking or tapping, the menu smoothly slides into view. The responsive navigation header was constructed using the MaterializeCSS framework. The header background has a translucent appearance, offering a subtle view of the background picture behind it.
+
+![Header expanded](documentation/header.png)
+![Header collapsed](documentation/header_collapsed.png)
+![Sidenav](documentation/sidenav.png)
+
+- **Page Footer** - It stretches across the entire width of the screen and consists of copyright information and social media links, both centered on all screen sizes. Social media icons change their color when a user hovers over them.
+
+![Page Footer on large devices](documentation/footer_large.png)
+![Page Footer on small devices](documentation/footer_small.png)
+
+- **Flashed Messages Container** - It plays a crucial role in enhancing the user experience by providing timely and relevant feedback to users as they interact with the website.  It is centered across all device sizes and matches the website's design.
+
+![Flashed message 1](documentation/flash_1.png)
+![Flashed message 2](documentation/flash_2.png)
+
+The **Home Page** features an AI-generated, animated image of the blog owner, providing a visually engaging introduction to the site. Alongside this, users are greeted with a brief, welcoming message. In this message, the blog owner introduces herself, offers an overview of the blog's purpose and topics, and defines its target audience. The message serves as a friendly invitation for users to explore further and engage with the blog's content.
+
+![Home Page](documentation/homepage.png)
+
+The **Sign-Up Page** allows you to create an account using just a username and password. If the username is already in use, an error message will prompt you to select an alternative. Signing up is necessary if you want to add comments to blog posts. Registered users can also edit and delete their own comments. This straightforward process makes it easy to join the community and start interacting with blog content.
+
+![Sign-Up Page](documentation/sign_up.png) 
+
+The **Sign-In Page** enables users to access their accounts by entering their correct username and password. If the provided credentials are incorrect, an error message will prompt users to try again. Visually consistent with the Sign-Up page, the Sign-In page offers a familiar interface for seamless navigation.
+
+![Sign-In Page](documentation/sign_in.png)
+
+Upon logging in, users are directed to the **Welcome Page**, providing a customized greeting featuring their username for a more personal touch. This page succinctly outlines the benefits and privileges available to registered users. It serves as an informative resource, offering insights into the advantages of being part of the platform.
+
+![Welcome Page](documentation/welcome_page.png)
+
+The **Blog Posts Page** offers concise previews of full blog posts, showcasing essential details such as category, date created, an accompanying image, and the blog post headline. For a seamless user experience, a "READ MORE" link redirects users to the corresponding full post page. If the blog post author chooses to display the post as 'NEW', a green envelope will appear before the blog headline. Hovering over it will trigger a tooltip displaying the message 'NEW POST!'.
+
+Utilizing MaterializeCSS and its responsive grid system, the layout adapts dynamically across devices. On large screens, three cards are neatly organized in a row, two on medium-sized devices, and a single card on smaller screens.
+
+Admin users benefit from additional functionalities. Below each post preview, dedicated "Edit" and "Delete" buttons provide streamlined content management. Moreover, an easily accessible "Add Blog Post" button appears prominently in the center of the page. For security and a personalized experience, non-admin users won't encounter these buttons or access the associated features.
+
+![Blog Posts Page](documentation/blog_posts_preview.png)
+
+The **Read Post Page** serves as the platform for displaying complete blog posts, fostering engagement through user comments. Registered users have the ability to interact by leaving comments, with the option to edit or delete their own contributions. When users choose to edit or delete their comments, a modal window appears, requesting confirmation before proceeding.
+
+![Read Post Page](documentation/read_post.png)
+![Modal Edit](documentation/modal_edit.png)
+![Modal Delete](documentation/modal_delete.png)
+
+
+The **Add New Blog Post Page** presents an intuitive form for creating new blog posts. Users begin by selecting a category from the dropdown menu and then proceed to fill in the blog post headline, body text, and image URL path. A convenient datepicker simplifies setting the creation date. Users can toggle an option to flag the post as "new" before finalizing their submission. With all details entered, users submit the post, seamlessly adding it to the MongoDB database.
+
+![Add New Blog Post Page](documentation/add_blog_post.png)
+
+And finally, the **Edit Existing Blog Post Page** utilizes the same form as described above, pre-filled with previously entered information. At the bottom of the page, users encounter two buttons: one to save the changes and the other to discard them.
+
+![Edit Existing Blog Post Page](documentation/edit_blog_post.png)
 
 ## Technologies Used
 
@@ -169,8 +233,9 @@ It contains 4 collections:
     | --- | --- | --- |
     | _id | ObjectId() | |
     | comment_content | String | |
-    | blog_post_id | ObjectId() | selected from *blog_posts* collection |
-    | password | String | uses Secure Hash Algorithm (SHA) |
+    | blog_post_id | ObjectId() | copied from *blog_posts* collection |
+    | username | String | |
+
 
 ## Testing
 
