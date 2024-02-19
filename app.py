@@ -54,7 +54,8 @@ def sign_up():
 
             sign_up = {
                 "username": request.form.get("username").lower(),
-                "password": generate_password_hash(request.form.get("password"))
+                "password": generate_password_hash(
+                    request.form.get("password"))
             }
             mongo.db.users.insert_one(sign_up)
 
@@ -64,7 +65,7 @@ def sign_up():
             return redirect(url_for("welcome", username=session["user"]))
 
         return render_template("sign_up.html")
-    
+
     # user is already signed in, direct them the home page
     return redirect("home.html")
 
@@ -81,11 +82,12 @@ def sign_in():
             if existing_user:
                 # ensure hashed password matches user input
                 if check_password_hash(
-                    existing_user["password"], request.form.get("password")):
-                        session["user"] = request.form.get("username").lower()
-                        flash("Welcome, {}!".format(
+                        existing_user["password"],
+                        request.form.get("password")):
+                    session["user"] = request.form.get("username").lower()
+                    flash("Welcome, {}!".format(
                             request.form.get("username")))
-                        return redirect(url_for(
+                    return redirect(url_for(
                             "welcome", username=session["user"]))
                 else:
                     # invalid password match
@@ -97,7 +99,7 @@ def sign_in():
                 flash("Incorrect Username and/or Password")
                 return redirect(url_for("sign_in"))
         return render_template("sign_in.html")
-    
+
     # user is already signed in, direct them the home page
     return redirect("home.html")
 
@@ -141,8 +143,10 @@ def read_post(blog_post_id):
     mongo.db.blog_posts.find_one({"_id": ObjectId(blog_post_id)})
 
     blog_post = mongo.db.blog_posts.find_one({"_id": ObjectId(blog_post_id)})
-    comments = list(mongo.db.comments.find({"blog_post_id": ObjectId(blog_post_id)}))
-    return render_template("read_post.html", blog_post=blog_post, comments=comments)
+    comments = list(mongo.db.comments.find(
+        {"blog_post_id": ObjectId(blog_post_id)}))
+    return render_template(
+        "read_post.html", blog_post=blog_post, comments=comments)
 
 
 @app.route("/add_blog_post", methods=["GET", "POST"])
@@ -196,13 +200,15 @@ def edit_blog_post(blog_post_id):
             "is_new": is_new,
             "created_by": session["user"]
         }
-        mongo.db.blog_posts.replace_one({"_id": ObjectId(blog_post_id)}, submit)
+        mongo.db.blog_posts.replace_one(
+            {"_id": ObjectId(blog_post_id)}, submit)
         flash("Blog Post Successfully Updated")
 
     # generate the form to edit a chosen blog post
     blog_post = mongo.db.blog_posts.find_one({"_id": ObjectId(blog_post_id)})
     categories = mongo.db.categories.find().sort("category_name", 1)
-    return render_template("edit_blog_post.html", blog_post=blog_post, categories=categories)
+    return render_template(
+        "edit_blog_post.html", blog_post=blog_post, categories=categories)
 
 
 @app.route("/delete_blog_post/<blog_post_id>")
@@ -231,7 +237,7 @@ def add_comment(blog_post_id):
     if request.method == "POST":
         comment = {
             "comment_content": request.form.get("comment_content"),
-            "blog_post_id" : ObjectId(blog_post_id),
+            "blog_post_id": ObjectId(blog_post_id),
             "username": session["user"]
             }
         mongo.db.comments.insert_one(comment)
@@ -246,8 +252,10 @@ def add_comment(blog_post_id):
 def edit_comment(comment_id):
     comment = mongo.db.comments.find_one({"_id": ObjectId(comment_id)})
 
-    # feature available only to the user who created a chosen commit or an admin
-    if session["user"].lower() != comment["username"].lower() or session["user"].lower() != "admin":
+    # feature available only to the user who created a chosen commit
+    # or an admin
+    if session["user"].lower() != comment["username"].lower() or
+    session["user"].lower() != "admin":
         flash("Access Denied. You do not own this comment.")
         return redirect(request.referrer)
 
@@ -267,8 +275,10 @@ def edit_comment(comment_id):
 def delete_comment(comment_id):
     comment = mongo.db.comments.find_one({"_id": ObjectId(comment_id)})
 
-    # feature available only to the user who created a chosen commit or an admin
-    if session["user"].lower() != comment["username"].lower() or session["user"].lower() != "admin":
+    # feature available only to the user who created a chosen commit
+    # or an admin
+    if session["user"].lower() != comment["username"].lower() or
+    session["user"].lower() != "admin":
         flash("Access Denied. You do not own this comment.")
         return redirect(request.referrer)
 

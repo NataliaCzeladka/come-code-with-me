@@ -1,3 +1,5 @@
+/* jshint esversion: 11, jquery: true */
+
 $(document).ready(function () {
   $(".sidenav").sidenav({ edge: "right" });
   $('.materialboxed').materialbox();

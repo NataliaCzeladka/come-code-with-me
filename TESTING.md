@@ -32,3 +32,11 @@ I have used the recommended [CSS Jigsaw Validator](https://jigsaw.w3.org/css-val
 | File | Jigsaw URL | Screenshot | Notes |
 | --- | --- | --- | --- |
 | style.css | [Jigsaw](https://jigsaw.w3.org/css-validator) | ![style.css validation](documentation/css_validation.png) | Pass: No Errors |
+
+### JS Lint Testing
+
+I have used [JSHint](https://jshint.com/) to identify potential errors in my JavaScript file. No errors were found.
+
+| File | Screenshot | Notes |
+| --- | --- | --- |
+| script.js | ![script.js](documentation/jshint_validation.png) | No errors found
