@@ -107,10 +107,6 @@ def sign_in():
 @app.route("/welcome/<username>", methods=["GET", "POST"])
 @login_required
 def welcome(username):
-    if "user" not in session:
-        flash("You must sign in to access this page.")
-        return redirect(url_for("sign_in"))
-
     # grab the session user's username from db
     username = mongo.db.users.find_one(
         {"username": session["user"]})["username"]
@@ -252,10 +248,9 @@ def add_comment(blog_post_id):
 def edit_comment(comment_id):
     comment = mongo.db.comments.find_one({"_id": ObjectId(comment_id)})
 
-    # feature available only to the user who created a chosen commit 
+    # feature available only to the user who created a chosen commit
     # or an admin
-    if session["user"].lower() != comment["username"].lower() or session[
-        "user"].lower() != "admin":
+    if session["user"].lower() != comment["username"].lower() or session["user"].lower() != "admin":  # noqa
         flash("Access Denied. You do not own this comment.")
         return redirect(request.referrer)
 
@@ -277,8 +272,7 @@ def delete_comment(comment_id):
 
     # feature available only to the user who created a chosen commit
     # or an admin
-    if session["user"].lower() != comment["username"].lower() or session[
-        "user"].lower() != "admin":
+    if session["user"].lower() != comment["username"].lower() or session["user"].lower() != "admin":  # noqa
         flash("Access Denied. You do not own this comment.")
         return redirect(request.referrer)
 

@@ -33,7 +33,7 @@ I have used the recommended [CSS Jigsaw Validator](https://jigsaw.w3.org/css-val
 | --- | --- | --- | --- |
 | style.css | [Jigsaw](https://jigsaw.w3.org/css-validator) | ![style.css validation](documentation/css_validation.png) | Pass: No Errors |
 
-### JS Lint Testing
+### JS Hint Testing
 
 I have used [JSHint](https://jshint.com/) to identify potential errors in my JavaScript file. No errors were found.
 
@@ -69,3 +69,60 @@ I have tested my deployed project on multiple devices to check for responsivenes
 | Mobile (DevTools) | ![screenshot1](documentation/mobile_res1.png) | ![screenshot2](documentation/mobile_res2.png) | ![screenshot3](documentation/mobile_res3.png) | Works as expected |
 | Tablet (DevTools) | ![screenshot1](documentation/tablet_res1.png) | ![screenshot2](documentation/tablet_res2.png) | ![screenshot3](documentation/tablet_res3.png) | Works as expected |
 | Desktop | ![screenshot1](documentation/chrome.png) | ![screenshot2](documentation/desktop_res2.png) | ![screenshot3](documentation/desktop_res3.png) | Works as expected |
+
+## Lighthouse Audit
+
+I have tested my deployed project using the Lighthouse Audit tool to check for any major issues. 
+
+| Page | Size | Screenshot | Notes |
+| --- | --- | --- | --- |
+| Home | Mobile | ![screenshot](documentation/home_audit_mobile.png) | Few warnings |
+| Home | Desktop | ![screenshot](documentation/home_audit_desktop.png) | Some minor warnings |
+| Welcome | Mobile | ![screenshot](documentation/welcome_audit_mobile.png) | Few warnings |
+| Welcome | Desktop | ![screenshot](documentation/welcome_audit_desktop.png) | Some minor warnings |
+| Sign Up | Mobile | ![screenshot](documentation/signup_audit_mobile.png) | Some minor warnings |
+| Sign Up | Desktop | ![screenshot](documentation/signup_audit_desktop.png) | Some minor warnings |
+| Sign In | Mobile | ![screenshot](documentation/signin_audit_mobile.png) | Some minor warnings |
+| Sign In | Desktop | ![screenshot](documentation/signup_audit_desktop.png) | Some minor warnings |
+| Blog Posts | Mobile | ![screenshot](documentation/blog_posts_audit_mobile.png) | Some minor warnings |
+| Blog Posts | Desktop | ![screenshot](documentation/blog_posts_audit_desktop.png) | Some minor warnings |
+| Read Post | Mobile | ![screenshot](documentation/read_post_audit_mobile.png) | Some minor warnings |
+| Read Post | Desktop | ![screenshot](documentation/read_post_audit_desktop.png) | Some minor warnings |
+| Add Blog Post | Mobile | ![screenshot](documentation/add_post_audit_mobile.png) | Few warnings |
+| Add Blog Posst | Desktop | ![screenshot](documentation/add_post_audit_desktop.png) | Some minor warnings |
+| Edit Blog Post | Mobile | ![screenshot](documentation/edit_post_audit_mobile.png) | Few warnings |
+| Edit Blog Post | Desktop | ![screenshot](documentation/edit_post_audit_desktop.png) | Few warnings |
+
+## User Stories Testing
+
+### Client Goals
+
+| User Stories | Completed? |
+| --- | --- |
+| As a client, I would like to provide users with accurate and up-to-date information about the current phase of the Moon. This could include displaying the Moon's appearance, percentage of illumination, distance to the Moon from Earth, and other relevant details. | ✔️ |
+| As a client, I would like to educate users about the different phases of the Moon and the science behind them. It could provide explanations, diagrams, and relevant images to help users understand the lunar cycle. | ✔️ |
+| As a client, I would like to provide a visual calendar that displays the Moon phases for a specific period (e.g., a year) that can help users track the Moon's changing appearance over time. | ✔️ |
+| As a client, I would like to deliver all of the above in the form of a visually appealing, intuitive, responsive across different devices and easy to navigate website. | ✔️ |
+
+### First Time User Goals
+
+| User Stories | Completed? |
+| --- | --- |
+| As a first time user, I should be able to quickly and easily see the current phase of the Moon, whether it's a Full Moon, New Moon, Waxing Crescent, Waning Gibbous, etc. | ✔️ |
+| As a first time user, I should be able to access more than just the current Moon Phase. I should be able to see additional information such as Moon illumination percentage, number of days through the cycle, number of days till the next Full Moon, etc. | ✔️ |
+| As a first time user, I should be able to explore a calendar view that shows the Moon's phases for a specific period, helping me understand how the Moon's appearance changes over time. | ✔️ |
+| As a first time user, I should be able to learn about the different phases of the Moon, their significance and why the Moon's appearance changes over time. | ✔️ |
+| As a first time user, I should be able to navigate throughout the page in an easy, effortless and intuitive way. | ✔️ |
+| As a first time user, I should be able to have a positive and enjoyable experience while browsing the website. | ✔️ |
+
+### Returning/Frequent User Goals
+
+| User Stories | Completed? |
+| --- | --- |
+| As a returning/frequent user, I should be able to continue tracking the Moon's changing phases to deepen my understanding of the Lunar Cycle. | ✔️ |
+| As a returning/frequent user, I should be able to plan upcoming activities that align with specific Moon phases, such as outdoor events, photography sessions, or astronomical observations. | ✔️ |
+| As a returning/frequent user, I should be able to revisit the website's settings to fine-tune my preferences, such as adjusting my time zone or choosing my favorite locations. | Take a look at the Future Implementations section in [README.md](README.md) file. |
+| As a returning/frequent user, I should be able to share my own observations, photos, or experiences related to Moon phases within the website's community. | Take a look at the Future Implementations section in [README.md](README.md) file. |
+| As a returning/frequent user, I should be able to stay informed about upcoming celestial events beyond Moon phases, such as meteor showers, planetary alignments, asteroids and comets. | Take a look at the Future Implementations section in [README.md](README.md) file. |
+| As a returning/frequent user, I should be able to access the provider's social media accounts. | ✔️ |
+| As a returning/frequent user, I should be able to offer feedback to the app developers based on my experiences, helping to shape future updates and improvements. | Take a look at the Future Implementations section in [README.md](README.md) file. |
