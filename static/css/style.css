@@ -58,6 +58,29 @@ main {
     margin-bottom: 30px;
 }
 
+.sidenav {
+    background-color: #000;
+}
+
+.sidenav li h4 {
+    font-family: 'Stint Ultra Expanded', serif;
+    margin: 15px;
+    text-align: right;
+    font-size: 220%;
+    color: #8f501d;
+}
+
+.sidenav li a {
+    font-family: 'Stint Ultra Expanded', serif;
+    text-align: right;
+    font-size: 150%;
+    color: white;
+}
+
+.sidenav li a:hover {
+    color: #ad7c54;
+}
+
 .nav-extended ul li a {
     font-family: 'Stint Ultra Expanded', serif;
     font-size: 120%;
