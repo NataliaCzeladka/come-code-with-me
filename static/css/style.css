@@ -20,10 +20,6 @@ body {
     flex-direction: column;
 }
 
-header {
-    padding: 0 5px;
-}
-
 main {
     flex: 1 0 auto;
     padding: 2% 0;
@@ -33,10 +29,10 @@ main {
     background-color: #00000095;
 }
 
-.card {
-    border: 1px solid #ad7c54;
-    padding: 20px;
-    background-color: #000;
+/* header */
+
+header {
+    padding: 0 5px;
 }
 
 .blog-name h1 {
@@ -89,6 +85,12 @@ main {
 
 .nav-extended ul li a:hover {
     color: #ad7c54;
+}
+
+.card {
+    border: 1px solid #ad7c54;
+    padding: 20px;
+    background-color: #000;
 }
 
 .intro {
