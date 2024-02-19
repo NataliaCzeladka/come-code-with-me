@@ -170,6 +170,7 @@ And finally, the **Edit Existing Blog Post Page** utilizes the same form as desc
 - Ability to respond to comments from other users. This feature promotes interaction and collaboration among users, creating a dynamic and vibrant community atmosphere.
 - Community Section - serves as a dedicated space for users to interact, exchange ideas, and share resources, fostering a sense of belonging and community within the platform.
 - Option to search the website by category, date added or a selected phrase.
+- Implementing feedback form.
 
 ## Technologies Used
 

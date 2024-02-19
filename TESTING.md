@@ -160,4 +160,13 @@ I have tested my deployed project using the Lighthouse Audit tool to check for a
 
 ## Fixed Bugs
 
+- The favicon wasn't displayed on all the site's pages due to the wrong href syntax in the header. I used `<link rel="icon" href="static/images/code_icon.png" type="image/x-icon">` instead of `<link rel="icon" href="{{ url_for('static', filename='images/code_icon.png') }}" type="image/x-icon">`.
+- I encountered a few Python `E501 line too long` errors that were resolved by either splitting the line content into the next one or by adding `# noqa` at the end of it.
+- Some of the methods I had been using were outdated and were throwing errors. I had to find their modern equivalents: `replace_one()` instead of `update()` and `delete_one()` instead of `remove()`.
+- Initially, I couldn't link my Flask application with MongoDB due to the wrong version of pymongo installed and not updating the requirements.txt file.
+
 ## Unfixed Bugs
+
+All blog posts were initially displayed as one large block of text, even though spaces between paragraphs were added during typing. While I can use HTML `<br>` tags to separate them, I wanted a simpler solution. Initially, I believed adding the `.post-body {white-space: pre-line;}` CSS rule would resolve the issue. However, I observed that it introduces a blank line before the first paragraph, which I find unappealing. Although I've left it as is for now, I'm eager to discover a method to display the blog post content with the original formatting applied during typing.
+
+![error1](documentation/error1.png)
