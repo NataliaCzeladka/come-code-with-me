@@ -164,7 +164,12 @@ And finally, the **Edit Existing Blog Post Page** utilizes the same form as desc
 
 #### Future Implementations
 
-
+- Option to add selected blog posts to your favorites and mark them as read, providing users with a personalized way to track and revisit content they find valuable.
+- User profile page to view their activity history and manage their saved content.
+- Option to create new categories for better content organization. This functionality will enable users to find relevant information more easily.
+- Ability to respond to comments from other users. This feature promotes interaction and collaboration among users, creating a dynamic and vibrant community atmosphere.
+- Community Section - serves as a dedicated space for users to interact, exchange ideas, and share resources, fostering a sense of belonging and community within the platform.
+- Option to search the website by category, date added or a selected phrase.
 
 ## Technologies Used
 

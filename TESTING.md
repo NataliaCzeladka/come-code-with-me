@@ -24,7 +24,7 @@ All tests described and documented in the Code Validation and the Lighthouse Aud
 
 [The W3C Markup Validation Service](https://validator.w3.org/) and [The W3C CSS Validation Service](https://jigsaw.w3.org/css-validator/) were used to validate every page of the project to ensure there were no syntax errors. The results clearly showed that the website stays in compliance with the standards and recommendations set by the World Wide Web Consortium.
 
-[JSLint](https://www.jslint.com/), a static code analysis tool, was used to check if JavaScript source code complies with coding rules. No errors were found in this area.
+[JSHint](https://jshint.com/), a static code analysis tool, was used to check if JavaScript source code complies with coding rules. No errors were found in this area.
 
 ### HTML Validation
 
@@ -151,6 +151,8 @@ I have tested my deployed project using the Lighthouse Audit tool to check for a
 
 ### Frequent User Goals
 
+| User Stories | Completed? |
+| --- | --- |
 | As a frequent user, I should be able to stay updated with the latest content, projects, and insights shared by the student on their coding journey. | Take a look at the Future Implementations section in [README.md](README.md) file. |
 | As a frequent user, I should be able to stay connected with the student and the community around the blog, including subscribing to newsletters, following social media updates, or joining forums or groups related to web app development. | Take a look at the Future Implementations section in [README.md](README.md) file. |
 | As a frequent user, I should be able to find solutions to specific coding challenges, troubleshoot issues, or learn new techniques and strategies in web app development based on my ongoing projects or interests. | Take a look at the Future Implementations section in [README.md](README.md) file. |
