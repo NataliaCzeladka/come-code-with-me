@@ -367,3 +367,35 @@ You can fork this repository by using the following steps:
 1. Log in to GitHub and locate the [GitHub Repository](https://github.com/NataliaCzeladka/come-code-with-me)
 2. At the top of the Repository (not top of page) just above the "Settings" Button on the menu, locate the "Fork" Button.
 3. Once clicked, you should now have a copy of the original repository in your own GitHub account!
+
+## Credits
+
+### Code
+
+- The website was created following a series of videos recorded by Tim Nelson, a mentor at Code Institute. Some of the code snippets used in these videos were also applied while creating my own full-stack application.
+
+- Code for the outline effect used on multiple occasions across the CSS stylesheet was taken from [Stack Overflow](https://stackoverflow.com/questions/4919076/outline-effect-to-text) and was slightly edited to fit the project's needs.
+
+- The code for a sticky footer, which remains at the bottom of the page regardless of the amount of content, was adopted from [Materialize's](https://materializecss.com/footer.html) website. Additionally, various pre-built elements from Materialize were utilized, including the responsive navbar, form input fields, tooltips, datepicker, and modals.
+
+- The code for the Login Required Decorator was sourced from the [Flask Documentation](https://flask.palletsprojects.com/en/2.0.x/patterns/viewdecorators/#login-required-decorator).
+
+### Content
+
+The website demonstrates great potential, and I'm considering using it as my own personal blog in the future. However, due to time limitations in creating this project, I've utilized ChatGPT to generate text content for the blog posts (excluding any code), enabling me to concentrate on other aspects of the website's development and customization.
+
+### Media
+
+| Image | Source |
+| --- | --- |
+| ![Background picture](static/images/shutterstock_2189462235.webp) | Picture by [colorful freedom](https://www.shutterstock.com/g/Thongkhomkrid) on [Shutterstock](https://www.shutterstock.com/) |
+| ![Blog post 1](documentation/shutterstock_2102451307.webp) | Picture by [Gorodenkoff](https://www.shutterstock.com/g/gorodenkoff) on [Shutterstock](https://www.shutterstock.com/) |
+| ![Blog post 2](documentation/shutterstock_2324952353.webp) | Picture by [Gorodenkoff](https://www.shutterstock.com/g/gorodenkoff) on [Shutterstock](https://www.shutterstock.com/) |
+| ![Blog post 3](documentation/shutterstock_2376546777.jpg) | Picture by [Golden Dayz](https://www.shutterstock.com/g/Golden+Dayz) on  [Shutterstock](https://www.shutterstock.com/) |
+| ![Main home page picture](static/images/come_code_with_me_2.png) | AI-generated using [Midjourney](https://www.midjourney.com/home?callbackUrl=%2Fexplore) |
+
+### Acknowledgements
+
+- [Tim Nelson](https://github.com/TravelTimN) (my Code Institute mentor) - for sharing his impressive knowledge, for his guidance, constructive feedback and for invaluable help with testing and debugging my Python code.
+- [Code Institute](https://codeinstitute.net) tutor team for their assistance with troubleshooting and debugging some of the project issues.
+- [Code Institute Slack Community](https://code-institute-room.slack.com) - for the moral support; it kept me going during periods of self-doubt and imposter syndrome.
