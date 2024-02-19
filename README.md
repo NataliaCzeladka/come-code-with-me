@@ -162,6 +162,10 @@ And finally, the **Edit Existing Blog Post Page** utilizes the same form as desc
 
 ![Edit Existing Blog Post Page](documentation/edit_blog_post.png)
 
+#### Future Implementations
+
+
+
 ## Technologies Used
 
 ### Languages Used
