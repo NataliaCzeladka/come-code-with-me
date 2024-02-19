@@ -157,6 +157,7 @@ main {
 .post-body {
     font-size: 120%;
     margin-bottom: 30px;
+    white-space: pre-line;
 }
 
 .btn-mocha {

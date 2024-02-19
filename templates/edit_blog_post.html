@@ -12,11 +12,11 @@
                 <select id="category_name" name="category_name" required>
                     <option value="" disabled>Choose Category</option>
                     {% for category in categories %}
-                        {% if category.category_name == blog_post.category_name %}
-                            <option value="{{ category.category_name }}" selected>{{ category.category_name }}</option>
-                        {% else %}
-                            <option value="{{ category.category_name }}">{{ category.category_name }}</option>
-                        {% endif %}
+                    {% if category.category_name == blog_post.category_name %}
+                    <option value="{{ category.category_name }}" selected>{{ category.category_name }}</option>
+                    {% else %}
+                    <option value="{{ category.category_name }}">{{ category.category_name }}</option>
+                    {% endif %}
                     {% endfor %}
                 </select>
                 <label for="category_name">Post Category</label>
@@ -26,7 +26,7 @@
         <div class="row extra-padding">
             <div class="input-field col s12">
                 <i class="fa-solid fa-newspaper prefix"></i>
-                <input id="headline" name="headline" type="text" minlength="5" maxlength="80" 
+                <input id="headline" name="headline" type="text" minlength="5" maxlength="80"
                     value="{{ blog_post.headline }}" class="validate" required>
                 <label for="headline">Headline</label>
             </div>
@@ -35,8 +35,7 @@
         <div class="row extra-padding">
             <div class="input-field col s12">
                 <i class="fa-solid fa-align-left prefix"></i>
-                <textarea id="post_body" name="post_body" minlength="5" 
-                    class="materialize-textarea validate" required>
+                <textarea id="post_body" name="post_body" minlength="5" class="materialize-textarea validate" required>
                 {{- blog_post.post_body -}}
                 </textarea>
                 <label for="post_body">Blog Post Body</label>
@@ -46,8 +45,8 @@
         <div class="row extra-padding">
             <div class="input-field col s12">
                 <i class="fa-solid fa-image prefix"></i>
-                <input id="image_url" name="image_url" type="text" 
-                    value="{{ blog_post.image_url }}" class="validate" required>
+                <input id="image_url" name="image_url" type="text" value="{{ blog_post.image_url }}" class="validate"
+                    required>
                 <label for="image_url">Image URL Path</label>
             </div>
         </div>
@@ -55,8 +54,8 @@
         <div class="row extra-padding">
             <div class="input-field col s12">
                 <i class="fa-solid fa-calendar-days prefix"></i>
-                <input id="date_created" name="date_created" type="text" 
-                    value="{{ blog_post.date_created }}" class="datepicker validate" required>
+                <input id="date_created" name="date_created" type="text" value="{{ blog_post.date_created }}"
+                    class="datepicker validate" required>
                 <label for="date_created">Date Created</label>
             </div>
         </div>
@@ -67,9 +66,9 @@
                     <i class="fas fa-exclamation-circle prefix"></i>
                     <label for="is_new">
                         {% if blog_post.is_new == "on" %}
-                            <input type="checkbox" id="is_new" name="is_new" checked>
+                        <input type="checkbox" id="is_new" name="is_new" checked>
                         {% else %}
-                            <input type="checkbox" id="is_new" name="is_new">
+                        <input type="checkbox" id="is_new" name="is_new">
                         {% endif %}
                         <span class="lever grey lighten-2"></span>
                         DISPLAY MY POST AS NEW
@@ -78,18 +77,20 @@
             </div>
         </div>
         <div class="center-align">
-            <!-- cancel editing -->            
-                <a href="{{ url_for('get_blog_posts') }}" class="btn btn-medium btn-red btn-edit extra-margin white-text">
+            <!-- cancel editing button -->
+            <button class="btn btn-medium btn-red btn-edit extra-margin">
+                <a href="{{ url_for('get_blog_posts') }}" aria-label="It opens the Blog page" class="white-text">
                     <i class="fa-solid fa-xmark white-text"></i>&nbsp;&nbsp;CANCEL
                 </a>
+            </button>
             <!-- edit button -->
             <button type="submit" class="btn btn-medium btn-green btn-edit extra-margin">
                 <a class="white-text ">
                     <i class="fa-solid fa-file-pen white-text"></i>&nbsp;&nbsp;EDIT
-                </a>   
+                </a>
             </button>
         </div>
-    </form>   
+    </form>
 </div>
 
 {% endblock %}

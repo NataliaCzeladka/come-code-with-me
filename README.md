@@ -110,8 +110,8 @@ Some features are common to all of the pages. These include:
 - **Page Header** - It features a centered logo comprising the blog's name and a subtitle in capital letters (notably smaller in size). Positioned in the top right corner is a responsive navigation element that collapses into a hamburger menu on medium and small devices. Links to all three pages change colour when hovered over by a user. The collapsed menu also contains links to all three pages. Upon clicking or tapping, the menu smoothly slides into view. The responsive navigation header was constructed using the MaterializeCSS framework. The header background has a translucent appearance, offering a subtle view of the background picture behind it.
 
 ![Header expanded](documentation/header.png)
-![Header collapsed](documentation/header_collapsed.png)
 ![Sidenav](documentation/sidenav.png)
+![Header collapsed](documentation/header_collapsed.png)
 
 - **Page Footer** - It stretches across the entire width of the screen and consists of copyright information and social media links, both centered on all screen sizes. Social media icons change their color when a user hovers over them.
 

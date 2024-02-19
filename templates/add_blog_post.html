@@ -2,7 +2,8 @@
 {% block content %}
 
 <div class="row new-post">
-    <form class="col s10 offset-s1 m8 offset-m2 black-transparent form-outer" method="POST" action="{{ url_for('add_blog_post') }}">
+    <form class="col s10 offset-s1 m8 offset-m2 black-transparent form-outer" method="POST"
+        action="{{ url_for('add_blog_post') }}">
         <h3 class="center-align form-title">Add New Blog Post</h3>
         <!-- category selection -->
         <div class="row extra-padding">
@@ -66,7 +67,7 @@
         <!-- submit button -->
         <div class="row">
             <button type="submit" class="col s6 offset-s3 l2 offset-l5 btn btn-medium btn-mocha">
-                <i class="fa-regular fa-floppy-disk white-text"></i>&nbsp;&nbsp;Save 
+                <i class="fa-regular fa-floppy-disk white-text"></i>&nbsp;&nbsp;Save
             </button>
         </div>
     </form>

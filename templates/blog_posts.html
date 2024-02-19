@@ -4,14 +4,17 @@
 <div class="container">
     <div class="row">
 
+        <!-- blog post preview card -->
         {% for blog_post in blog_posts %}
         <div class="col s12 m6 xl4">
             <div class="card large">
                 <p><i class="fa-solid fa-thumbtack left brown-text"></i>Category: {{ blog_post.category_name }}</p>
-                <p><i class="fa-solid fa-calendar-days left brown-text"></i>Date created: {{ blog_post.date_created }}</p>
+                <p><i class="fa-solid fa-calendar-days left brown-text"></i>Date created: {{ blog_post.date_created }}
+                </p>
                 <br>
                 <div class="card-image waves-effect waves-block waves-light">
-                    <img src='{{ blog_post.image_url }}'>
+                    <img src='{{ blog_post.image_url }}'
+                        alt="A blog post image reffering to the content of a blog post body">
                 </div>
                 <div class="card-content">
                     <div class="card-title grey-text text-darken-4">
@@ -19,25 +22,32 @@
                         <i class="fa-regular fa-envelope left tooltipped white-text green-text text-darken-2"
                             data-position="left" data-tooltip="NEW POST!"></i>
                         {% endif %}
-                        <span class="white-text title"> {{ blog_post.headline }}</span>  
+                        <span class="white-text title"> {{ blog_post.headline }}</span>
                     </div>
                 </div>
                 <div class="card-action">
-                    <p><a href="{{ url_for('read_post', blog_post_id=blog_post._id) }}" class="brown-text text-lighten-2">Read
+                    <p><a href="{{ url_for('read_post', blog_post_id=blog_post._id) }}"
+                            class="brown-text text-lighten-2">Read
                             more ...</a></p>
                 </div>
             </div>
+
+            <!-- admin only features -->
             {% if session.user == "admin" %}
             <div class="even">
-                <a href="{{ url_for('edit_blog_post', blog_post_id=blog_post._id) }}"
-                    aria-label="It opens Edit Blog Post page">
-                    <button class="btn waves-effect waves-light btn-medium btn-green" type="submit">
-                        <i class="fa-solid fa-file-pen"></i> EDIT</button>
-                </a>
-                <a class="waves-effect waves-light modal-trigger" href="#modal1">
-                    <button class="btn waves-effect waves-light btn-medium btn-red" type="submit">
-                        <i class="fa-solid fa-trash"></i> DELETE</button>
-                </a>
+                <!-- edit blog post -->
+                <button class="btn waves-effect waves-light btn-medium btn-green" type="submit">
+                    <a class="white-text" href="{{ url_for('edit_blog_post', blog_post_id=blog_post._id) }}"
+                        aria-label="It opens the Edit Blog Post page">
+                        <i class="fa-solid fa-file-pen"></i> EDIT</a>
+                </button>
+                <!-- delete blog post -->
+                <button class="btn waves-effect waves-light btn-medium btn-red" type="submit">
+                    <a class="modal-trigger white-text" href="#modal1"
+                        aria-label="It opens a modal to confirm deletion">
+                        <i class="fa-solid fa-trash"></i> DELETE</a>
+                </button>
+                <!-- modal -->
                 <div id="modal1" class="modal">
                     <div class="modal-content">
                         <h5 class="black-text"><i class="fa-solid fa-trash left"></i> Deleting Blog Post</h5>
@@ -59,12 +69,13 @@
     </div>
 </div>
 
+<!-- add new blog post (admin only feature) -->
 {% if session.user == "admin" %}
 <div class="center-align">
-    <a href="{{ url_for('add_blog_post')}}" aria-label="It opens Add Blog Post page">
-        <button class="btn waves-effect waves-light btn-large btn-mocha" type="submit">
-            <i class="fa-solid fa-plus"></i> Add Blog Post</button>
-    </a>
+    <button class="btn waves-effect waves-light btn-large btn-mocha" type="submit">
+        <a href="{{ url_for('add_blog_post')}}" aria-label="It opens Add Blog Post page" class="white-text">
+            <i class="fa-solid fa-plus"></i> Add Blog Post</a>
+    </button>
 </div>
 {% endif %}
 

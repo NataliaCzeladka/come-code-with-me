@@ -1,13 +1,12 @@
 {% extends "base.html" %}
 {% block content %}
 
-
 <div class="row">
     <form class="col s10 offset-s1 m8 offset-m2 xl6 offset-xl3" method="POST" action="{{ url_for('sign_up') }}">
         <div class="card-panel black-transparent form-outer">
             <h3 class="center-align form-title">Create Your Account</h3>
             <h6 class="center-align form-title">Already registered? Please, <a href="{{ url_for('sign_in')}}"
-                    class="internal-link" aria-label="It opens Sign In page"><i
+                    class="internal-link" aria-label="It opens the Sign In page"><i
                         class="fa-solid fa-arrow-right-to-bracket"></i> sign in</a>.</h6>
             <!-- username -->
             <div class="row">

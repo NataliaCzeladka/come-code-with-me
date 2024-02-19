@@ -1,13 +1,15 @@
 {% extends "base.html" %}
 {% block content %}
 
+<!-- display full blog post -->
 <div class="row">
     <form class="col s10 offset-s1 m8 offset-m2">
         <div class="row black form-outer">
             <p><i class="fa-solid fa-thumbtack left brown-text"></i>Category: {{ blog_post.category_name }}</p>
             <p><i class="fa-solid fa-calendar-days left brown-text"></i>Date created: {{ blog_post.date_created }}</p>
             <h3 class="center-align form-title">{{ blog_post.headline }}</h3>
-            <img src="{{ blog_post.image_url }}" class="col s12 l6">
+            <img src="{{ blog_post.image_url }}" alt="A blog post image reffering to the content of a blog post body"
+                class="col s12 l6">
             <div class="extra-padding post-body">
                 {{ blog_post.post_body|safe }}
             </div>
@@ -15,6 +17,7 @@
     </form>
 </div>
 
+<!-- comment section -->
 <div class="row">
     <div class="col s10 offset-s1 m8 offset-m2 black form-outer">
         <div class="extra-margin">
@@ -25,6 +28,7 @@
                     <span class="brown-text text-lighten-2">User {{ comment.username|upper }} wrote:</span>
                     <span>{{ comment.comment_content }}</span>
                     {% if session.user|lower == comment.username|lower or session.user|lower == "admin" %}
+                    <!-- edit comment -->
                     <span>
                         <button data-target="editModal{{ comment._id }}" class="btn btn-small btn-mocha modal-trigger"
                             type="button"><i class="fa-regular fa-pen-to-square"></i> Edit</button>
@@ -35,22 +39,22 @@
                                     <div class="input-field">
                                         <i class="fa-solid fa-comment-dots prefix"></i>
                                         <input id="edited_comment_content" name="edited_comment_content" type="text"
-                                            minlength="5" maxlength="1000" class="black-text" value="{{ comment.comment_content }}"
-                                            required>
+                                            minlength="5" maxlength="1000" class="black-text"
+                                            value="{{ comment.comment_content }}" required>
                                         <label for="edited_comment_content"></label>
                                     </div>
                                     <div class="right-align">
-                                    <button type="submit" class="btn waves-effect waves-green btn-small btn-mocha">
-                                        <i class="fa-regular fa-floppy-disk left"></i> Save Changes
-                                    </button>
-                                    <a href="#!" class="modal-close waves-effect waves-green btn-small btn-mocha"><i
-                                        class="fa-solid fa-xmark left"></i> Discard Changes</a>
+                                        <button type="submit" class="btn waves-effect waves-green btn-small btn-mocha">
+                                            <i class="fa-regular fa-floppy-disk left"></i> Save Changes
+                                        </button>
+                                        <a href="#!" class="modal-close waves-effect waves-green btn-small btn-mocha"><i
+                                                class="fa-solid fa-xmark left"></i> Discard Changes</a>
                                     </div>
                                 </form>
                             </div>
                         </div>
-
                     </span>
+                    <!-- delete comment -->
                     <span>
                         <button data-target="deleteModal{{ comment._id }}" class="btn btn-small btn-mocha modal-trigger"
                             type="button"><i class="fa-solid fa-trash"></i> Delete</button>
@@ -74,6 +78,7 @@
                 {% endfor %}
             </ul>
         </div>
+        <!-- add new comment -->
         <form method="POST" action="{{ url_for('add_comment', blog_post_id=blog_post._id) }}">
             <div class="extra-padding">
                 {% if session.user %}
@@ -90,8 +95,8 @@
                         <i class="fa-regular fa-floppy-disk white-text left"></i> Save Comment
                     </button>
                     {% else %}
-                    <h3 class="sacramento"><a href="{{ url_for('sign_in')}}" class="internal-link"
-                            aria-label="It opens Sign In page"><i class="fa-solid fa-arrow-right-to-bracket"></i>
+                    <h3 class="sacramento"><a href="{{ url_for('sign_in') }}" class="internal-link"
+                            aria-label="It opens the Sign In page"><i class="fa-solid fa-arrow-right-to-bracket"></i>
                             Sign into your account to add comments</a></h3>
                     {% endif %}
                 </div>
