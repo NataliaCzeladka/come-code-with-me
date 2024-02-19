@@ -39,4 +39,33 @@ I have used [JSHint](https://jshint.com/) to identify potential errors in my Jav
 
 | File | Screenshot | Notes |
 | --- | --- | --- |
-| script.js | ![script.js](documentation/jshint_validation.png) | No errors found
+| script.js | ![script.js](documentation/jshint_validation.png) | No errors found |
+
+### Python Testing
+
+I have used the recommended [PEP8 CI Python Linter](https://pep8ci.herokuapp.com) to validate my Python file.
+
+| File | Screenshot | Notes |
+| --- | --- | --- |
+| app.py | ![screenshot](documentation/python_validation.png) | No errors found |
+
+## Browser Compatibility
+
+I have tested my deployed project on multiple browsers to check for compatibility issues.
+
+| Browser | Screenshot | Notes |
+| --- | --- | --- |
+| Chrome | ![screenshot](documentation/chrome.png) | Works as expected |
+| Firefox | ![screenshot](documentation/firefox.png) | Works as expected |
+| Edge | ![screenshot](documentation/edge.png) | Works as expected |
+| Opera | ![screenshot](documentation/opera.png) | Works as expected |
+
+## Responsiveness
+
+I have tested my deployed project on multiple devices to check for responsiveness issues. It responds well to different screen sizes ensuring that users can access and navigate the content effortlessly, regardless of their chosen device. No design or functionality issues were found.
+
+| Device | Screenshot 1 | Screenshot 2 | Screenshot 3 | Notes |
+| --- | --- | --- | --- | --- |
+| Mobile (DevTools) | ![screenshot1](documentation/mobile_res1.png) | ![screenshot2](documentation/mobile_res2.png) | ![screenshot3](documentation/mobile_res3.png) | Works as expected |
+| Tablet (DevTools) | ![screenshot1](documentation/tablet_res1.png) | ![screenshot2](documentation/tablet_res2.png) | ![screenshot3](documentation/tablet_res3.png) | Works as expected |
+| Desktop | ![screenshot1](documentation/chrome.png) | ![screenshot2](documentation/desktop_res2.png) | ![screenshot3](documentation/desktop_res3.png) | Works as expected |
