@@ -129,7 +129,7 @@ def sign_out():
 @app.route("/get_blog_posts")
 def get_blog_posts():
     # find all blog posts
-    blog_posts = list(mongo.db.blog_posts.find().sort("date_created", 1))
+    blog_posts = list(mongo.db.blog_posts.find().sort("date_created", -1))
     return render_template("blog_posts.html", blog_posts=blog_posts)
 
 
@@ -199,6 +199,7 @@ def edit_blog_post(blog_post_id):
         mongo.db.blog_posts.replace_one(
             {"_id": ObjectId(blog_post_id)}, submit)
         flash("Blog Post Successfully Updated")
+        return redirect(url_for("get_blog_posts"))
 
     # generate the form to edit a chosen blog post
     blog_post = mongo.db.blog_posts.find_one({"_id": ObjectId(blog_post_id)})
@@ -210,14 +211,20 @@ def edit_blog_post(blog_post_id):
 @app.route("/delete_blog_post/<blog_post_id>")
 @login_required
 def delete_blog_post(blog_post_id):
-    # deleting a chosen blog post
-    # admin only page
+
+    # check if the user is an admin
     if "user" not in session or session["user"].lower() != "admin":
         flash("Access denied. You must be an Admin to delete blog posts.")
         return redirect(url_for("get_blog_posts"))
 
-    mongo.db.blog_posts.delete_one({"_id": ObjectId(blog_post_id)})
-    flash("Blog Post Successfully Deleted")
+    # If the user is an admin, proceed with deleting the blog post
+    blog_post = mongo.db.blog_posts.find_one({"_id": ObjectId(blog_post_id)})
+    if blog_post:
+        mongo.db.blog_posts.delete_one({"_id": ObjectId(blog_post_id)})
+        flash("Blog Post Successfully Deleted")
+    else:
+        flash("Blog Post not found or already deleted")
+
     return redirect(url_for("get_blog_posts"))
 
 
@@ -250,7 +257,7 @@ def edit_comment(comment_id):
 
     # feature available only to the user who created a chosen commit
     # or an admin
-    if session["user"].lower() != comment["username"].lower() or session["user"].lower() != "admin":  # noqa
+    if session["user"].lower() != comment["username"].lower() and session["user"].lower() != "admin":  # noqa
         flash("Access Denied. You do not own this comment.")
         return redirect(request.referrer)
 
@@ -270,9 +277,9 @@ def edit_comment(comment_id):
 def delete_comment(comment_id):
     comment = mongo.db.comments.find_one({"_id": ObjectId(comment_id)})
 
-    # feature available only to the user who created a chosen commit
-    # or an admin
-    if session["user"].lower() != comment["username"].lower() or session["user"].lower() != "admin":  # noqa
+    # # feature available only to the user who created a chosen commit
+    # # or an admin
+    if session["user"].lower() != comment["username"].lower() and session["user"].lower() != "admin":  # noqa
         flash("Access Denied. You do not own this comment.")
         return redirect(request.referrer)
 

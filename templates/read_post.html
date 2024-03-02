@@ -30,7 +30,7 @@
                     {% if session.user|lower == comment.username|lower or session.user|lower == "admin" %}
                     <!-- edit comment -->
                     <span>
-                        <button data-target="editModal{{ comment._id }}" class="btn btn-small btn-mocha modal-trigger"
+                        <button data-target="editModal{{ comment._id }}" class="btn btn-small btn-mocha btn-comment modal-trigger"
                             type="button"><i class="fa-regular fa-pen-to-square"></i> Edit</button>
                         <div id="editModal{{ comment._id }}" class="modal">
                             <div class="modal-content">
@@ -56,7 +56,7 @@
                     </span>
                     <!-- delete comment -->
                     <span>
-                        <button data-target="deleteModal{{ comment._id }}" class="btn btn-small btn-mocha modal-trigger"
+                        <button data-target="deleteModal{{ comment._id }}" class="btn btn-small btn-mocha btn-comment modal-trigger"
                             type="button"><i class="fa-solid fa-trash"></i> Delete</button>
                         <div id="deleteModal{{ comment._id }}" class="modal">
                             <div class="modal-content">
@@ -91,7 +91,7 @@
                 {% endif %}
                 <div class="center-align">
                     {% if session.user %}
-                    <button type="submit" class="btn btn-medium btn-mocha">
+                    <button type="submit" class="btn btn-medium btn-mocha btn-save">
                         <i class="fa-regular fa-floppy-disk white-text left"></i> Save Comment
                     </button>
                     {% else %}

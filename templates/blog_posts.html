@@ -42,24 +42,27 @@
                         <i class="fa-solid fa-file-pen"></i> EDIT</a>
                 </button>
                 <!-- delete blog post -->
-                <button class="btn waves-effect waves-light btn-medium btn-red" type="submit">
-                    <a class="modal-trigger white-text" href="#modal1"
+                <button class="btn waves-effect waves-light btn-medium btn-red modal-trigger" type="button"
+                    data-target="modal{{ blog_post._id }}">
+                    <a class="white-text" href="#modal{{ blog_post._id }}"
                         aria-label="It opens a modal to confirm deletion">
-                        <i class="fa-solid fa-trash"></i> DELETE</a>
+                        <i class="fa-solid fa-trash"></i> DELETE
+                    </a>
                 </button>
                 <!-- modal -->
-                <div id="modal1" class="modal">
+                <div id="modal{{ blog_post._id }}" class="modal">
                     <div class="modal-content">
                         <h5 class="black-text"><i class="fa-solid fa-trash left"></i> Deleting Blog Post</h5>
-                        <h6 class="black-text">Are you sure you want to
-                            delete this blog post?</h6>
+                        <h6 class="black-text">Are you sure you want to delete this blog post?</h6>
                     </div>
                     <div class="modal-footer">
                         <a href="{{ url_for('delete_blog_post', blog_post_id=blog_post._id) }}"
-                            class="modal-close waves-effect waves-green btn-small btn-mocha"><i
-                                class="fa-solid fa-check left"></i> Yes</a>
-                        <a href="#!" class="modal-close waves-effect waves-green btn-small btn-mocha"><i
-                                class="fa-solid fa-xmark left"></i> No</a>
+                            class="modal-close waves-effect waves-green btn-small btn-mocha">
+                            <i class="fa-solid fa-check left"></i> Yes
+                        </a>
+                        <a href="#!" class="modal-close waves-effect waves-green btn-small btn-mocha">
+                            <i class="fa-solid fa-xmark left"></i> No
+                        </a>
                     </div>
                 </div>
             </div>

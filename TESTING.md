@@ -167,6 +167,8 @@ I have tested my deployed project using the Lighthouse Audit tool to check for a
 
 ## Unfixed Bugs
 
-All blog posts were initially displayed as one large block of text, even though spaces between paragraphs were added during typing. While I can use HTML `<br>` tags to separate them, I wanted a simpler solution. Initially, I believed adding the `.post-body {white-space: pre-line;}` CSS rule would resolve the issue. However, I observed that it introduces a blank line before the first paragraph, which I find unappealing. Although I've left it as is for now, I'm eager to discover a method to display the blog post content with the original formatting applied during typing.
+- All blog posts were initially displayed as one large block of text, even though spaces between paragraphs were added during typing. While I can use HTML `<br>` tags to separate them, I wanted a simpler solution. Initially, I believed adding the `.post-body {white-space: pre-line;}` CSS rule would resolve the issue. However, I observed that it introduces a blank line before the first paragraph, which I find unappealing. Although I've left it as it is for now, I'm eager to discover a method to display the blog post content with the original formatting applied during typing.
 
 ![error1](documentation/error1.png)
+
+- Blog posts are not displaying in descending order correctly because the date is stored in string format.

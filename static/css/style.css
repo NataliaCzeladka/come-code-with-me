@@ -193,6 +193,14 @@ header {
     width: 150px;
 }
 
+.btn-save {
+    margin-bottom: 10px;
+}
+
+.btn-comment {
+    margin: 5px 0;
+}
+
 .extra-margin {
     margin: 20px;
 }
@@ -262,10 +270,6 @@ input, textarea {
 
 .internal-link {
     color: #ad7c54;
-}
-
-.modal-trigger {
-    margin: 5px 0;
 }
 
 .even {
